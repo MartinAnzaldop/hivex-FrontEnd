@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,6 +20,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
   ],
 
-  imports:[BrowserModule, RouterModule]
+  imports:[BrowserModule, RouterModule, SharedModule]
 })
 export class AdminModule { }
