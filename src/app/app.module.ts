@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { AdminModule } from './admin/admin.module';
+import { SellerModule } from './seller/seller.module';
+
 
 
 
@@ -13,12 +15,14 @@ import { AdminModule } from './admin/admin.module';
     AppComponent,
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UserModule,
-    AdminModule
+    AdminModule,
+    SellerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

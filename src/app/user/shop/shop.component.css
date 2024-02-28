@@ -1,0 +1,41 @@
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  flex: 1;
+  margin: 10px;
+  border: 1px solid #ccc;
+  max-width: calc(33.3333% - 20px); /* Para garantizar que haya espacio suficiente entre las tarjetas en pantallas más pequeñas */
+  box-sizing: border-box;
+
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+
+}
+.img{
+  width: 80%;
+  height: 80%;
+  object-position: center;
+  margin-left: 15px;
+
+}
+.img:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+
+
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card {
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Media query para ajustar el diseño en pantallas más pequeñas aún */
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%;
+  }
+}

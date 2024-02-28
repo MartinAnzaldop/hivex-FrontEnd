@@ -1,0 +1,21 @@
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+
+}
+.img{
+  width: 80%;
+  height: 80%;
+  object-position: center;
+  margin-left: 15px;
+
+}
+.img:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
