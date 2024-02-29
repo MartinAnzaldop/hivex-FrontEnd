@@ -25,6 +25,20 @@
   filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
 }
 
+.empresa:hover{
+
+  transform: scale(1.1);
+}
+.empresa{
+  height: 250px;
+}
+.title{
+ /* Sintaxis clásica */
+  text-decoration: underline;
+
+  /* Sintaxis moderna */
+  text-decoration: 2px wavy overline gold;
+}
 
 /* Media query para ajustar el diseño en pantallas más pequeñas */
 @media (max-width: 768px) {
@@ -39,3 +53,5 @@
     max-width: 100%;
   }
 }
+
+
