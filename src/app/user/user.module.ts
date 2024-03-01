@@ -10,6 +10,7 @@ import { ShopComponent } from './shop/shop.component';
 import { CarComponent } from './car/car.component';
 import { SharedModule } from '../shared/shared.module';
 import { CatalogoComponent } from './catalogo/catalogo.component';
+import { UniversityComponent } from './university/university.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
     ShopComponent,
     CarComponent,
     CatalogoComponent,
+    UniversityComponent,
 
   ],
   exports: [

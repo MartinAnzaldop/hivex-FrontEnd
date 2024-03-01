@@ -1,0 +1,37 @@
+.card{
+  
+  border-top: 10px;/* Ajusta el valor según sea necesario */
+}
+
+.icono-play {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px; /* Ajusta el tamaño según tus necesidades */
+  height: 50px;
+  background: url('/assets/img/play.png') center center no-repeat; /* Reemplaza 'icono_play.png' con la ruta de tu propio icono */
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+.icono-play:hover {
+
+  background: url('/assets/img/play-hover.png') center center no-repeat; /* Reemplaza 'icono_play.png' con la ruta de tu propio icono */
+
+}
+
+.img{
+
+  border-radius: 10px; /* Ajusta el valor según sea necesario */
+
+}
+
+.title{
+  /* Sintaxis clásica */
+   text-decoration: underline;
+
+   /* Sintaxis moderna */
+   text-decoration: 2px wavy overline gold;
+ }

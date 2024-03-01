@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CarComponent } from './car/car.component';
 import { ShopComponent } from './shop/shop.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
+import { UniversityComponent } from './university/university.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
     {path: 'car',component:CarComponent},
     {path: 'categories',component:ShopComponent},
     {path: 'Catalogue',component:CatalogoComponent},
+    {path: 'university',component:UniversityComponent},
 ];
 
 
