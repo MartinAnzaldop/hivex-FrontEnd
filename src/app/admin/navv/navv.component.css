@@ -1,0 +1,30 @@
+
+.navbar {
+    background-color: #383838; /* Cambia el color de fondo del navbar */
+    border-bottom: 2px solid #cec21c;
+     /* Agrega un borde en la parte inferior del navbar */
+  }
+  
+  .navbar-brand {
+    color: #ff0000; /* Cambia el color del texto del navbar brand */
+    font-size: 1 rem; /* Ajusta el tamaño del texto del navbar brand */
+  /* Hace el texto del navbar brand en negrita */
+  }
+  
+  .container-fluid{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .navbar-brand img {
+    margin-right: 29px;
+    width: 172px;
+    height: 73px;
+    margin-top: -20px;
+    margin-bottom: -8px;
+    margin-left: -3px;
+  }
+  

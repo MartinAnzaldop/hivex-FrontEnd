@@ -1,0 +1,26 @@
+<app-navv></app-navv>
+<div class="admin-panel">
+  <h2 class="titulo">Panel de Administración de Productos</h2>
+  <div class="product-list">
+      <div *ngFor="let producto of productos" class="product-item">
+          <div class="product-content">
+              <img [src]="producto.imagen" alt="Imagen del producto" class="product-image">
+              <div class="product-details">
+                  <h3>{{ producto.nombre }}</h3>
+                  <p>{{ producto.detalle1 }}</p>
+                  <p>{{ producto.detalle2 }}</p>
+                  <div class="additional-info">
+                      <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+                      <p><strong>Stock:</strong> {{ producto.stock }} unidades</p>
+                      <p><strong>Vendedor:</strong> {{ producto.vendedor }}</p>
+                  </div>
+              </div>
+          </div>
+          <div class="button-container">
+            <button (click)="aprobarProducto(producto)" class="approve-button">Aprobar</button>
+            <button (click)="rechazarProducto(producto)" class="reject-button">Rechazar</button>
+        </div>
+      </div>
+  </div>
+</div>
+

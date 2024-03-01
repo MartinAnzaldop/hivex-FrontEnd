@@ -1,0 +1,120 @@
+
+.navbar {
+  background-color: #383838; /* Cambia el color de fondo del navbar */
+  border-bottom: 2px solid #cec21c;
+   /* Agrega un borde en la parte inferior del navbar */
+}
+
+.navbar-brand {
+  color: #ff0000; /* Cambia el color del texto del navbar brand */
+  font-size: 1 rem; /* Ajusta el tamaño del texto del navbar brand */
+/* Hace el texto del navbar brand en negrita */
+}
+
+.container-fluid{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-brand img {
+  margin-right: 29px;
+  width: 172px;
+  height: 73px;
+  margin-top: -20px;
+  margin-bottom: -8px;
+  margin-left: -3px;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+/* En el archivo card-view.component.css */
+.card-container {
+  display: flex;
+    padding: 39px;
+    margin-top: 118px;
+    margin-left: -74px;
+}
+
+
+.card {
+  width: 30%;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 11px;
+    padding: 43px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 95px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.card a {
+  color: #818181; /* Cambia el color del texto de los enlaces a azul */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  display: block; /* Hace que los enlaces ocupen todo el ancho de su contenedor */
+  margin-bottom: 5px; /* Añade un margen inferior de 5px entre los enlaces */
+}
+
+.card a:hover {
+  color: rgb(206, 168, 0); /* Cambia el color del texto del enlace a rojo cuando se pasa el mouse */
+}

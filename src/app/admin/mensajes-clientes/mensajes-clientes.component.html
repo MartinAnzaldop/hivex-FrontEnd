@@ -1,0 +1,61 @@
+<app-navv></app-navv>
+
+
+<div class="card-container">
+    <div class="card">
+        <img src="assets/img/Iphone15.png" alt="Producto 1">
+        <h3>iPhone 15</h3>
+        <h4>Detalles:</h4>
+        <p>Pantalla OLED de 6.7 pulgadas</p>
+        <p>Chip A16 Bionic</p>
+        <p>Vendedor: Apple</p>
+        <h4>Preguntas: 10</h4>
+        <button class="view-comments" (click)="openModal()">Ver Preguntas</button> 
+    </div>
+    <div class="card">
+        <img src="assets/img/camisa.png" alt="Producto 1">
+        <h3>Camisa de Vestir</h3>
+        <h4>Detalles:</h4>
+        <p>Color Negra</p>
+        <p>Tallas disponibles: S, M, L, XL</p>
+        <p>Vendedor: Zara</p>
+        <h4>Preguntas: 17</h4>
+        <button class="view-comments" (click)="openModal()">Ver Preguntas</button> 
+    </div>
+    <div class="card">
+        <img src="assets/img/watch.png" alt="Producto 1">
+        <h3>Reloj de mano</h3>
+        <p >Detalles:</p>
+        <p >A prueba de agua, de acero inoxidable</p>
+        <p >Color Plateado/Bronce</p>
+        <p>Vendedor: Rolex</p>
+       <p>Preguntas: 13</p>
+        <button class="view-comments" (click)="openModal()">Ver Preguntas</button> 
+    </div>
+   
+    <!-- Otros productos aquí -->
+</div>
+
+
+<div class="modal" [style.display]="showModal ? 'block' : 'none'">
+
+
+
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <h2>Preguntas de Clientes</h2>
+        <div class="comment" *ngFor="let comment of comments">
+            <h3>{{ comment.user }}</h3>
+            <p>{{ comment.text }}</p>
+            <!-- Botón Responder -->
+            <button class="view-comments2" *ngIf="comment.showReplyButton" (click)="selectComment(comment)">Responder</button>
+            <!-- Formulario de comentarios -->
+            <form class="comment-form" *ngIf="comment.showForm">
+                <textarea placeholder="Escribe tu comentario"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    
+
+</div>

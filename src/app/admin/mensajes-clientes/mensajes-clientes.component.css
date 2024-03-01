@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+
+.view-comments {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-comments2 {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 13px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+
+
+.comments-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.comments-section h2 {
+    margin-top: 0;
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.comment h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* En el archivo card-view.component.css */
+.card-container {
+    display: flex;
+      padding: 39px;
+      margin-top: 118px;
+      margin-left: 26px;
+  }
+  
+  
+  .card {
+    width: 295px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 11px;
+      padding: 43px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-left: 95px;
+  }
+
+  .card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .card a {
+    color: #818181; /* Cambia el color del texto de los enlaces a azul */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    display: block; /* Hace que los enlaces ocupen todo el ancho de su contenedor */
+    margin-bottom: 5px; /* Añade un margen inferior de 5px entre los enlaces */
+  }
+  
+  .card a:hover {
+    color: rgb(206, 168, 0); /* Cambia el color del texto del enlace a rojo cuando se pasa el mouse */
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    max-height: 70vh; /* Altura máxima del modal */
+    overflow-y: auto;
+    margin-top: 146px; 
+    border-radius: 25px;/* Habilita el desplazamiento vertical si el contenido excede la altura máxima */
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.comment {
+    margin-bottom: 20px; /* Espacio entre comentarios */
+}
+
+.comment-form {
+    margin-top: 10px; /* Espacio entre comentario y formulario */
+    
+}

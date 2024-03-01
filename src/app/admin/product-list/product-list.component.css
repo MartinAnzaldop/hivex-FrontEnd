@@ -1,0 +1,192 @@
+/* En el archivo productos.component.css */
+
+/* Estilos para el contenedor de productos */
+.product-container {
+    max-width: 1601px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 725px;
+    overflow-y: auto;
+    margin-top: 95px;
+  }
+  
+  /* Estilos para la lista de productos */
+  .product-list {
+    padding-right: 10px; /* Para compensar el espacio del scroll vertical */
+  }
+  
+  /* Estilos para cada elemento de la lista de productos */
+  .product-item {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd; /* Borde inferior entre productos */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+  }
+  
+  /* Estilos para el contenido del producto */
+  .product-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilos para la imagen del producto */
+  .product-image {
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+    margin-right: 20px; /* Espacio a la derecha de la imagen */
+  }
+  
+  /* Estilos para la información del producto */
+  .product-info {
+    flex-grow: 1; /* El contenido se expande para ocupar todo el espacio restante */
+  }
+  
+  /* Estilos para el nombre del producto */
+  .product-name {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para los detalles */
+  .product-details {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para el stock y el precio */
+  .product-price-stock {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline; /* Distribuye los elementos uniformemente */
+  }
+  
+  /* Estilos para el stock */
+  .product-stock {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Estilos para el precio */
+  .product-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 77px; /* Color verde para el precio */
+  }
+  .buttons-container {
+    display: flex;
+    /* justify-content: space-around; */
+    margin-top: 20px;
+    margin-left: 150px;
+  }
+  
+  .buttons-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 30px; /* Distancia entre los botones */
+  }
+  
+  .add-product-button {
+    background-color: #d8cd34; /* Azul */
+    color: #000000;
+    
+  }
+  
+  .delete-button {
+    background-color: #d8cd34; /* Rojo */
+    color: #000000;
+  }
+  
+  .customize-button {
+    background-color: #d8cd34; /* Verde */
+    color: #000000;
+  }
+  
+  /* styles.css */
+  .navbar {
+    background-color: #383838; /* Cambia el color de fondo del navbar */
+    border-bottom: 1px solid #dee2e6;
+     /* Agrega un borde en la parte inferior del navbar */
+  }
+  
+  .navbar-brand {
+    color: #ff0000; /* Cambia el color del texto del navbar brand */
+    font-size: 1 rem; /* Ajusta el tamaño del texto del navbar brand */
+  /* Hace el texto del navbar brand en negrita */
+  }
+
+.container-fluid{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-brand img {
+  margin-right: 29px;
+  width: 172px;
+  height: 73px;
+  margin-top: -26px;
+  margin-bottom: -12px;
+  margin-left: -28px;
+}
+
+
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}

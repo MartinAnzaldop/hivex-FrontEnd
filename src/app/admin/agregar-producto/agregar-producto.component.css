@@ -1,0 +1,87 @@
+
+.navbar {
+    background-color: #383838; /* Cambia el color de fondo del navbar */
+    border-bottom: 1px solid #dee2e6;
+     /* Agrega un borde en la parte inferior del navbar */
+  }
+  
+  .navbar-brand {
+    color: #ff0000; /* Cambia el color del texto del navbar brand */
+    font-size: 1 rem; /* Ajusta el tamaño del texto del navbar brand */
+  /* Hace el texto del navbar brand en negrita */
+  }
+  
+  .container-fluid{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .navbar-brand img {
+    margin-right: 29px;
+    width: 172px;
+    height: 73px;
+    margin-top: -26px;
+    margin-bottom: -12px;
+    margin-left: -28px;
+  }
+  
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 134px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* para incluir padding y border en el ancho total */
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* para permitir el redimensionamiento vertical */
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

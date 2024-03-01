@@ -1,0 +1,30 @@
+<!-- En el archivo productos.component.html -->
+
+<app-navv></app-navv>
+
+<div class="product-container">
+    <div class="product-list">
+      <h2>Lista de Productos</h2>
+      <div *ngFor="let producto of productos" class="product-item">
+        <div class="product-content">
+          <img [src]="producto.imagen" alt="{{ producto.nombre }}" class="product-image">
+          <div class="product-info">
+            <h3 class="product-name">{{ producto.nombre }}</h3>
+            <p class="product-details">Detalles: {{ producto.detalles }}</p>
+          </div>
+          <div class="product-price-stock">
+            <p class="product-stock">Stock: {{ producto.stock }}</p>
+            <p class="product-price">Precio: ${{ producto.precio }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+
+  <div class="buttons-container">
+    <button class="add-product-button" (click)="agregarProducto()">Agregar Producto</button>
+    <button class="delete-button"  (click)="eliminarProducto(productos)" class="delete-button">Eliminar Producto</button>
+    <button class="customize-button">Editar Producto</button>
+  </div>

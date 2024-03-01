@@ -1,0 +1,69 @@
+.admin-panel {
+  max-width: 1169px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 97px;
+  margin-left: 34px;
+}
+
+.product-list {
+  margin-top: 20px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 64px;
+}
+.titulo{
+  margin-bottom: 50px;
+}
+.product-image {
+  max-width: 200px; /* Ancho máximo de la imagen */
+  height: auto;
+  margin-right: 20px;
+}
+
+.product-details {
+  flex-grow: 1;
+  margin-left: 281px;
+    margin-top: -192px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-left: 470px;
+  margin-top: 188px; 
+  /* Alinea los botones al final del contenedor */
+}
+
+
+.reject-button {
+  margin-top: 10px;
+  margin-left: 16px;
+  background-color: #d8cd34; /* Azul */
+    color: #000000;
+    border-radius: 5px;
+    font-size: 16px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.approve-button{
+  margin-left: -34px;
+  background-color: #d8cd34; /* Azul */
+    color: #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
