@@ -8,16 +8,18 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { DashboardSellerComponent } from './dashboard-seller/dashboard-seller.component';
 
 
 
 @NgModule({
   declarations: [
-    HomeSellerComponent
+    HomeSellerComponent,
+    DashboardSellerComponent
 
   ],
   exports: [
-    HomeSellerComponent
+    HomeSellerComponent, DashboardSellerComponent
   ],
 
   imports: [BrowserModule, RouterModule,

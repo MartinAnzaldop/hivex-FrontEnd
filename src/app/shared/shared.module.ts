@@ -7,6 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HeaderSellerComponent } from './header-seller/header-seller.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     HeaderUserComponent,
 
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderSellerComponent
 
   ],
   exports: [
@@ -23,7 +25,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     HeaderUserComponent,
     BrowserModule,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderSellerComponent
 
 
   ],
