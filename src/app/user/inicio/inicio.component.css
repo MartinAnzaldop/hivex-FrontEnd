@@ -1,15 +1,18 @@
 .card {
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: 10px;
-  flex: 1;
-  margin: 10px;
-  border: 1px solid #ccc;
-  max-width: calc(33.3333% - 20px); /* Para garantizar que haya espacio suficiente entre las tarjetas en pantallas más pequeñas */
-  box-sizing: border-box;
-
+  -webkit-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+border-radius: 10px;
 }
 
+.botton{
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.redondo{
+  border-radius: 10px;
+}
 .card img {
   border-radius: 10px 10px 0 0;
 
@@ -53,5 +56,6 @@
     max-width: 100%;
   }
 }
+
 
 
