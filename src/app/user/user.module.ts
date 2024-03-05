@@ -11,6 +11,8 @@ import { CarComponent } from './car/car.component';
 import { SharedModule } from '../shared/shared.module';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { UniversityComponent } from './university/university.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { UniversityComponent } from './university/university.component';
     CarComponent,
     CatalogoComponent,
     UniversityComponent,
+    LoginComponent,
+    RegisterComponent,
 
   ],
   exports: [
