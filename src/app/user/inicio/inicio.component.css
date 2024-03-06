@@ -3,6 +3,13 @@
 -moz-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
 box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
 border-radius: 10px;
+height: 400px;
+}
+
+.card-title{
+  font-size: large;
+  text-align: center;
+  font: weight 900;
 }
 
 .botton{
@@ -22,7 +29,6 @@ border-radius: 10px;
   height: 80%;
   object-position: center;
   margin-left: 15px;
-
 }
 .img:hover {
   filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
@@ -43,6 +49,9 @@ border-radius: 10px;
   text-decoration: 2px wavy overline gold;
 }
 
+.botton:hover{
+  box-shadow: inset 0 0 0 50px rgb(248, 211, 2);
+}
 /* Media query para ajustar el diseño en pantallas más pequeñas */
 @media (max-width: 768px) {
   .card {
@@ -57,5 +66,14 @@ border-radius: 10px;
   }
 }
 
-
-
+@media (max-width: 768px) {
+  .card {
+    height: 300px;
+    width: 200pc;/*
+     Puedes ajustar este valor según tus necesidades */
+  }
+  .card-title{
+    font-size: medium;
+    text-align: center;
+  }
+}

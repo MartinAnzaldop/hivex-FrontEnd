@@ -4,6 +4,7 @@
     -moz-box-shadow: 0px 7px 29px 1px rgba(0,0,0,0.75);
     box-shadow: 0px 7px 29px 1px rgba(0,0,0,0.75);
   border-radius: 10px;
+  height: 400px;
 
 }
 
@@ -28,7 +29,7 @@
 
 .img{
 
-  
+
   -moz-border-radius: 28px 29px 0px 0px;
   -webkit-border-radius: 28px 29px 0px 0px;
   border: 14px none #f7ff03;
@@ -41,7 +42,27 @@
 .title{
   /* Sintaxis clásica */
    text-decoration: underline;
+   -webkit-text-stroke-width: 1px;
 
+   -webkit-text-stroke-color: rgb(0, 0, 0);
+margin-top: 10px ;
    /* Sintaxis moderna */
    text-decoration: 2px wavy overline gold;
  }
+
+ @media (max-width: 768px) {
+  .card {
+    height: 400px;
+margin-top: 40px;
+
+  }
+  .card-title{
+    font-size: medium;
+    text-align: center;
+  }
+  .textUni{
+   text-align: center;
+    font-palette: --Purples;
+
+  }
+}

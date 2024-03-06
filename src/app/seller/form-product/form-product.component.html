@@ -1,1 +1,30 @@
-<p>form-product works!</p>
+<app-header-seller></app-header-seller>
+<br><br>
+<div class="container">
+  <div class="row ">
+      <div class="col-6 form mx-auto">
+          <h2 class="text-center mb-4">Product Form</h2>
+          <form>
+              <div class="mb-3">
+                  <label for="productName" class="form-label">Product Name</label>
+                  <input type="text" class="form-control" id="productName" placeholder="Enter the product name">
+              </div>
+              <div class="mb-3">
+                  <label for="price" class="form-label">Price</label>
+                  <input type="number" class="form-control" id="price" placeholder="Enter the price">
+              </div>
+              <div class="mb-3">
+                  <label for="stack" class="form-label">Stack</label>
+                  <input type="number" class="form-control" id="stack" placeholder="Enter the stack">
+              </div>
+              <div class="mb-3">
+                  <label for="description" class="form-label">Product Description</label>
+                  <textarea class="form-control" id="description" rows="3" placeholder="Enter the description"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success" routerLink="/listProducts">Submit</button>
+              <button type="submit" class="btn btn-danger ml-1" routerLink="/listProducts">cancel</button>
+          </form>
+          <br>
+      </div>
+  </div>
+</div>
