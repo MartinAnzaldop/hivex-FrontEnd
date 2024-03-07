@@ -5,26 +5,47 @@
       <div class="col-6 form mx-auto">
           <h2 class="text-center mb-4">Product Form</h2>
           <form>
-              <div class="mb-3">
-                  <label for="productName" class="form-label">Product Name</label>
-                  <input type="text" class="form-control" id="productName" placeholder="Enter the product name">
+            <div class="mb-3 row">
+                <label for="productName" class="form-label col-sm-2">Product Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="productName" placeholder="Enter the product name">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="price" class="form-label col-sm-2">Price</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="price" placeholder="Enter the price">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="stack" class="form-label col-sm-2">Stack</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="stack" placeholder="Enter the stack">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="description" class="form-label col-sm-2">Product Description</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="description" rows="3" placeholder="Enter the description"></textarea>
+                </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="description" class="form-label col-sm-2">Images</label>
+              <div class="col-sm-10">
+                <input type="file" class="form-control" id="stack" placeholder="Enter the stack">
               </div>
-              <div class="mb-3">
-                  <label for="price" class="form-label">Price</label>
-                  <input type="number" class="form-control" id="price" placeholder="Enter the price">
-              </div>
-              <div class="mb-3">
-                  <label for="stack" class="form-label">Stack</label>
-                  <input type="number" class="form-control" id="stack" placeholder="Enter the stack">
-              </div>
-              <div class="mb-3">
-                  <label for="description" class="form-label">Product Description</label>
-                  <textarea class="form-control" id="description" rows="3" placeholder="Enter the description"></textarea>
-              </div>
-              <button type="submit" class="btn btn-success" routerLink="/listProducts">Submit</button>
-              <button type="submit" class="btn btn-danger ml-1" routerLink="/listProducts">cancel</button>
-          </form>
+          </div>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-success" routerLink="/listProducts">Submit</button>
+                    <button type="submit" class="btn btn-danger ml-1" routerLink="/listProducts">Cancel</button>
+                </div>
+            </div>
+        </form>
           <br>
       </div>
   </div>
 </div>
+<br><br><br><br><br><br><br><br>
+<app-footer></app-footer>

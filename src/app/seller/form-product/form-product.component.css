@@ -9,3 +9,11 @@
 }
 
 
+
+@media (max-width: 768px) {
+  .btn {
+    margin-bottom: 5px;
+  }
+
+
+}

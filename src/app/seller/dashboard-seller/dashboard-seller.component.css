@@ -8,13 +8,16 @@
   align-items: center;
 }
 
+h5{
+  text-align: center;
+}
 
 .cards{
   -webkit-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
   box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
   border-radius: 10px;
-  height: 400px;
+  height: 380px;
 }
 
 @media (max-width: 768px) {
