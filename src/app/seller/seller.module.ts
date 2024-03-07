@@ -31,7 +31,7 @@ import { RegisterComponent } from './register/register.component';
 
   ],
   exports: [
-    HomeSellerComponent, DashboardSellerComponent
+    HomeSellerComponent, DashboardSellerComponent,RegisterComponent
   ],
 
   imports: [BrowserModule, RouterModule,
