@@ -1,4 +1,7 @@
-import { Component, OnInit,ViewEncapsulation  } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-register',
@@ -6,6 +9,13 @@ import { Component, OnInit,ViewEncapsulation  } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
+
+  constructor() { }
+
+
+
+
   companyName: string = '';
   country: string = '';
   productType: string = '';
@@ -14,12 +24,12 @@ export class RegisterComponent implements OnInit {
   contactRFC: string = '';
   countryCode: string = '';
   onCountryCodeChange(event: any) {
-   
+
     this.countryCode = event.target.value.replace(/[^0-9]/g, '');
   }
 
   onPhoneChange(event: any) {
-   
+
     this.phone = event.target.value.replace(/[^0-9]/g, '');
   }
   ngOnInit() {
@@ -37,4 +47,5 @@ export class RegisterComponent implements OnInit {
       countryCode: this.countryCode,
     });
   }
+
 }
