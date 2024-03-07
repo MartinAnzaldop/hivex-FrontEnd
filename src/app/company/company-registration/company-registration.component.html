@@ -1,0 +1,59 @@
+<!-- Agrega tus estilos en el head del HTML -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap">
+
+<div class="h-registration-container">
+  <div class="h-main-content">
+    <div class="h-registration-header">
+      <h2 class="h-main-title">Registro de Empresa</h2>
+    </div>
+
+    <div class="h-horizontal-layout">
+      <div class="h-image-container">
+        <img class="img-fluid h-logo" src="assets/img/LOGO.png" alt="HIVEX">
+      </div>
+
+      <form (ngSubmit)="onSubmit()" class="h-registration-form">
+
+          
+        <div class="h-form-group">
+          <label for="companyName">Nombre de la Empresa:</label>
+          <input type="text" id="companyName" name="companyName" [(ngModel)]="companyName" required />
+        </div>
+
+        <div class="h-form-group">
+          <label for="country">País:</label>
+          <input type="text" id="country" name="country" [(ngModel)]="country" required />
+        </div>
+
+        <div class="h-form-group">
+          <label for="productType">Tipo de Productos:</label>
+          <input type="text" id="productType" name="productType" [(ngModel)]="productType" required />
+        </div>
+
+<div class="h-form-group">
+  <label for="countryCode">Teléfono:</label>
+  <div class="phone-container">
+    <input type="tel" id="countryCode" name="countryCode" [(ngModel)]="countryCode" placeholder="+XX" maxlength="4" required />
+    <input type="tel" id="phone" name="phone" [(ngModel)]="phone" (input)="onPhoneChange($event)" maxlength="11" required />
+  </div>
+</div>
+
+          
+          
+          
+
+        <div class="h-form-group">
+          <label for="contactName">Nombre del Encargado:</label>
+          <input type="text" id="contactName" name="contactName" [(ngModel)]="contactName" required />
+        </div>
+
+        <div class="h-form-group">
+          <label for="contactRFC">RFC del Encargado:</label>
+          <input type="text" id="contactRFC" name="contactRFC" [(ngModel)]="contactRFC" required />
+        </div>
+
+        <button type="submit" class="h-submit-button">Registrar Empresa</button>
+      </form>
+    </div>
+  </div>
+</div>

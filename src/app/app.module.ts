@@ -5,20 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { AdminModule } from './admin/admin.module';
-
+//NUEVO
+import { FormsModule } from '@angular/forms';
+import { CompanyModule } from './company/company.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UserModule,
-    AdminModule
+    AdminModule,
+    //NUEVO
+    CompanyModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
