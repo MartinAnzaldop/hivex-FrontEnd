@@ -3,6 +3,7 @@
 -moz-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
 box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
 border-radius: 10px;
+height: 420px;
 }
 .img{
   width: 80%;
@@ -17,15 +18,16 @@ border-radius: 10px;
 
 
 /* Media query para ajustar el diseño en pantallas más pequeñas */
+
+
 @media (max-width: 768px) {
   .card {
-    max-width: calc(50% - 20px);
-  }
-}
+    height: 350px;
+    width: 160px;
 
-/* Media query para ajustar el diseño en pantallas más pequeñas aún */
-@media (max-width: 480px) {
-  .card {
-    max-width: 100%;
   }
+  .title{
+    font-size: 15px;
+  }
+
 }
