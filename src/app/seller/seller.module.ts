@@ -14,6 +14,7 @@ import { ChatsComponent } from './chats/chats.component';
 import { OrdersComponent } from './orders/orders.component';
 import { FormProductComponent } from './form-product/form-product.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -25,7 +26,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
     ChatsComponent,
     OrdersComponent,
     FormProductComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    RegisterComponent
 
   ],
   exports: [
