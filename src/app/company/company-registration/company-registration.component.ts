@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewEncapsulation  } from '@angular/core';
 
 @Component({
   selector: 'app-company-registration',
   templateUrl: './company-registration.component.html',
-  styleUrls: ['./company-registration.component.css']
+  styleUrls: ['./company-registration.component.css',]
 })
 export class CompanyRegistrationComponent implements OnInit {
   companyName: string = '';
@@ -12,7 +12,7 @@ export class CompanyRegistrationComponent implements OnInit {
   phone: string = '';
   contactName: string = '';
   contactRFC: string = '';
-  countryCode: string = '+';
+  countryCode: string = '';
   onCountryCodeChange(event: any) {
     // Bloquear entrada de no números
     this.countryCode = event.target.value.replace(/[^0-9]/g, '');

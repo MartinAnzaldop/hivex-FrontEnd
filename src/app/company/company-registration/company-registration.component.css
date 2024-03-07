@@ -1,152 +1,193 @@
-/* Estilos generales */
 body {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Contenedor principal */
-  .h-registration-container {
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-  }
-  
-  /* Títulos */
-  .h-main-title {
-    font-size: 2em;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding-bottom: 20px;
-  }
-  
-  /* Diseño horizontal */
-  .h-horizontal-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  /* Imagen */
-  .h-image-container {
-    flex: 0.4; /* Ajusta el tamaño de la imagen según tus necesidades */
-    text-align: center;
-  }
-  
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px; /* Reducido el espacio superior */
-  }
-  
-  /* Formulario de registro */
-  .h-registration-form {
-    flex: 1;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  /* Grupo de formulario */
-  .h-form-group {
-    margin-bottom: 20px;
-  }
-  
-  /* Etiquetas del formulario */
-  .h-form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: rgb(0, 0, 0);
-  }
-  
-  /* Entradas del formulario */
-  .h-form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #F9DD1E;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  /* Código de país y teléfono en un solo label */
-  .h-form-group .phone-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .h-form-group select {
-    max-height: 150px;
-    overflow-y: auto;
-    margin-right: 5px;
-    border: 2px solid #F9DD1E;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  /* Botón de envío */
-  .h-submit-button {
-    background-color: #F9DD1E;
-    color: #000000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .h-submit-button:hover {
-    background-color: #DC9A0A;
-  }
-  
-  /* Media Query para pantallas verticales */
-  @media screen and (orientation: portrait) {
-    /* Restablece el estilo horizontal y apila los elementos verticalmente */
-    .h-horizontal-layout {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .h-registration-form {
-      margin-top: 20px;
-    }
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.h-registration-background {
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
 
-/* Añade al final de tu archivo CSS */
+.h-registration-container {
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #2c2c2c;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.h-form-group label {
-  display: block;
-  margin-bottom: 5px;
+.h-image-container {
+  flex: 1 1 50%;
+  text-align: center;
+  padding: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.h-registration-form {
+  flex: 1 1 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid #969696;
+  position: relative;
+  margin: 10px;
+}
+
+.h-main-title {
+  font-size: 2em;
   color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.h-form-group .phone-container {
+.h-form-group {
+  margin-bottom: 9px;
+
+  input {
+    width: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .phone-container {
     display: flex;
     align-items: center;
+
+    #countryCode {
+      width: 80px;
+      margin-right: 10px;
+    }
+
+    #phone {
+      width: calc(100% - 90px);
+    }
+
+    #countryCode::placeholder {
+      color: #999;
+    }
+  }
+}
+.h-form-group2 {
+  margin-bottom: 9px;
+
+  input {
+    width: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 8px;
   }
 
-.h-form-group .code-container {
-  margin-right: 5px;
+  .phone-container {
+    display: flex;
+    align-items: center;
+
+    #countryCode {
+      width: 80px;
+      margin-right: 10px;
+    }
+
+    #phone {
+      width: calc(100% - 90px);
+    }
+
+    #countryCode::placeholder {
+      color: #999;
+    }
+  }
 }
 
-.h-form-group select,
-.h-form-group input {
-    margin-right: 10px; /* Ajusta el espacio entre el código de país y el teléfono según sea necesario */
-  }
+.h-submit-button {
+  background-color: #f9dd1e;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 
-.h-form-group select {
-  max-width: 100px;  /* Ajusta el ancho máximo del campo de código de país según sea necesario */
+  &:hover {
+    background-color: #dc9a0a;
+  }
 }
 
-#countryCode {
-    width: 80px; /* Ajusta según sea necesario */
-    margin-right: 10px; /* Ajusta el espacio entre el código de país y el teléfono según sea necesario */
+@media screen and (orientation: portrait) {
+  body {
+    margin: 20px;
   }
-  #phone {
-    width: 100%; /* O ajusta según sea necesario */
+
+  .h-registration-form {
+    margin-top: 30px;
   }
-  #countryCode::placeholder {
-  color: #999; /* O cualquier otro color gris que desees */
+
+  .h-image-container,
+  .h-registration-form {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+
+  .h-form-overlay {
+    left: 5%;
+    margin-left: 20px; 
+  }
+  .h-form-group2 {
+    margin-top: 20px;
+  }
+}
+
+.h-image-caption {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.h-underline {
+  width: 26%;
+  height: 5px;
+  margin-left: 20px;
+  background-color: #f9dd1e;
+  margin-bottom: 30px;
+}
+
+.h-registration-form-wrapper {
+  position: relative;
+}
+
+.h-form-overlay {
+  position: absolute;
+  top: -15px;
+  margin-left: 110px;
+  transform: translateX(-40%);
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1;
+  font-size: 90%;
+
+}
+.navmenu {
+  background-color: #676767;
+
+  overflow: hidden; 
+}
+
+.nav-logo {
+  width: 200px;
+  float: left; 
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: -5px;
 }
