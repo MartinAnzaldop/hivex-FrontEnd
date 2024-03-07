@@ -7,6 +7,7 @@ import { ListProductsComponent } from './list-products/list-products.component';
 import { FormProductComponent } from './form-product/form-product.component';
 import { ChatsComponent } from './chats/chats.component';
 import { OrdersComponent } from './orders/orders.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -18,7 +19,7 @@ const routes: Routes = [
     {path: 'chats',component:ChatsComponent},
     {path: 'orders',component:OrdersComponent},
     {path: 'statistics',component:StatisticsComponent},
-
+    {path: 'registerSeller',component:RegisterComponent}
 
 
 ];
