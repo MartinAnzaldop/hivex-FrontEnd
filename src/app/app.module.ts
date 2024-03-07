@@ -5,9 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { AdminModule } from './admin/admin.module';
-//NUEVO
-import { FormsModule } from '@angular/forms';
-import { CompanyModule } from './company/company.module';
+
 
 
 @NgModule({
@@ -18,10 +16,7 @@ import { CompanyModule } from './company/company.module';
     BrowserModule,
     AppRoutingModule,
     UserModule,
-    AdminModule,
-    //NUEVO
-    CompanyModule,
-    FormsModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,17 @@
+.nav{
+  background-color: rgb(8, 8, 8);
+}
+
+
+.img{
+  border-radius: 10px;
+  align-items: center;
+}
+
+
+.cards{
+  webkit-box-shadow: -11px -1px 4px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -11px -1px 4px 0px rgba(0,0,0,0.75);
+box-shadow: -11px -1px 4px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+}
