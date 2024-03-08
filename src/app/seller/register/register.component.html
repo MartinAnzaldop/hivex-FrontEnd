@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<p>register works!</p>
-=======
 
-<div class="navmenu">
-    <img class="img-fluid nav-logo" src="assets/img/HIVEX.png" alt="Logo de navegación"> 
-  </div>
+<app-header-user></app-header-user>
+<app-navbar></app-navbar>
+
   <div class="h-registration-background">
     <div class="h-registration-container">
       <div class="h-horizontal-layout">
@@ -24,17 +21,17 @@
                 <label for="companyName">NOMBRE DE LA EMPRESA:</label>
                 <input type="text" id="companyName" name="companyName" [(ngModel)]="companyName" placeholder="Ingrese el nombre de la empresa" required />
               </div>
-  
+
               <div class="h-form-group">
                 <label for="country">PAÍS:</label>
                 <input type="text" id="country" name="country" [(ngModel)]="country" placeholder="Ingrese su país" required />
               </div>
-  
+
               <div class="h-form-group">
                 <label for="productType">TIPO DE PRODUCTOS:</label>
                 <input type="text" id="productType" name="productType" [(ngModel)]="productType" placeholder="Ingrese el tipo de producto" required />
               </div>
-  
+
               <div class="h-form-group">
                 <label for="countryCode">TELÉFONO:</label>
                 <div class="phone-container">
@@ -42,24 +39,24 @@
                   <input type="tel" id="phone" name="phone" [(ngModel)]="phone" (input)="onPhoneChange($event)" maxlength="11" placeholder="Ingrese el número de teléfono" required />
                 </div>
               </div>
-  
+
               <div class="h-form-group">
                 <label for="contactName">NOMBRE DEL ENCARGADO:</label>
                 <input type="text" id="contactName" name="contactName" [(ngModel)]="contactName" placeholder="Ingrese el nombre del encargado" required />
               </div>
-  
+
               <div class="h-form-group">
                 <label for="contactRFC">RFC DEL ENCARGADO:</label>
                 <input type="text" id="contactRFC" name="contactRFC" [(ngModel)]="contactRFC" placeholder="Ingrese el RFC del encargado" required />
               </div>
               <br>
-  
-              <button type="submit" class="h-submit-button">Registrar Empresa</button>
+
+              <button type="submit" routerLink="/dashboardSeller" class="h-submit-button">Registrar Empresa</button>
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
->>>>>>> 2dfa0bf547844f9975299ddce1b4e26bad1a113b
+
+<app-footer></app-footer>

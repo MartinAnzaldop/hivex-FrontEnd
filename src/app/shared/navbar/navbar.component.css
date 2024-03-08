@@ -3,24 +3,4 @@
 }
 
 
-.boton1{
-  color:rgb(255, 0, 0);
-  background-color: rgb(221, 221, 235);
-  border-top-left-radius: 10px;
- }
 
- .boton2{
-   color:rgb(255, 0, 0);
-   background-color: rgb(221, 221, 235);
-   border-top-right-radius: 10px;
- }
-
- .boton1:hover{
-    background-color: rgb(91, 119, 211);
-    color: white;
- }
-
- .boton2:hover{
-  background-color: rgb(196, 81, 60);
-  color: white;
-}
