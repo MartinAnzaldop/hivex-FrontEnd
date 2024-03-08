@@ -1,0 +1,6 @@
+.card{
+  border-radius: 21px 21px 21px 21px;
+-moz-border-radius: 21px 21px 21px 21px;
+-webkit-border-radius: 21px 21px 21px 21px;
+border: 0px solid #000000;
+}

@@ -1,0 +1,19 @@
+.form{
+  border-radius: 10px;
+  border-color: blue;
+  background-color: gold;
+}
+
+.form-label{
+  color: black;
+}
+
+
+
+@media (max-width: 768px) {
+  .btn {
+    margin-bottom: 5px;
+  }
+
+
+}

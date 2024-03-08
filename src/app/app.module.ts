@@ -13,6 +13,7 @@ import { EmpresasComponent } from './admin/empresas/empresas.component';
 import { ProductosComponent } from './admin/productos/productos.component';
 import { NavvComponent } from './admin/navv/navv.component';
 import { AdminModule } from './admin/admin.module';
+
 import { MensajesClientesComponent } from './admin/mensajes-clientes/mensajes-clientes.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { MatTableModule } from '@angular/material/table';
@@ -24,6 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { AllproductsComponent } from './admin/allproducts/allproducts.component';
+import { SellerModule } from './seller/seller.module';
+
 
 
 
@@ -56,11 +59,13 @@ import { AllproductsComponent } from './admin/allproducts/allproducts.component'
     
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UserModule,
+
     BrowserAnimationsModule,
     MatSidenavModule,
     MatToolbarModule,
@@ -72,6 +77,9 @@ import { AllproductsComponent } from './admin/allproducts/allproducts.component'
     MatTableModule,
     
     
+
+    AdminModule,
+    SellerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

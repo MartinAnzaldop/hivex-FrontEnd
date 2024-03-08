@@ -1,0 +1,33 @@
+.nav{
+  background-color: rgb(8, 8, 8);
+}
+
+
+.img{
+  border-radius: 10px;
+  align-items: center;
+}
+
+h5{
+  text-align: center;
+}
+
+.cards{
+  -webkit-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+  height: 380px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 450px;
+  }
+  .nav{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+
+}
