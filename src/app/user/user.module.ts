@@ -13,6 +13,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { UniversityComponent } from './university/university.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeUserComponent } from './home-user/home-user.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { RegisterComponent } from './register/register.component';
     UniversityComponent,
     LoginComponent,
     RegisterComponent,
+    HomeUserComponent,
 
   ],
   exports: [

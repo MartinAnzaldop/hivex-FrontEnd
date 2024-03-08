@@ -15,16 +15,21 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav mr-auto py-0">
-            <a href="index.html" routerLink="/inicio" class="nav-item nav-link active">Home</a>
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="shop.html" routerLink="/categories" class="nav-item nav-link">Shop</a>
 
-
-
-            <a  routerLink="/university" class="nav-item nav-link">University</a>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="cart.html" routerLink="/car" class="dropdown-item">Shopping Cart</a>
+                <a href="checkout.html" routerLink="/checkout" class="dropdown-item">Checkout</a>
+              </div>
+            </div>
             <a href="contact.html" routerLink="/contact" class="nav-item nav-link">Contact</a>
           </div>
           <div class="navbar-nav ml-auto py-0">
-            <a href="" *ngIf="Usuario == ''" routerLink="/login" class="nav-item nav-link">Login</a>
-            <a routerLink="/register" class="nav-item nav-link">Register</a>
+            <p>User: <strong>Martin</strong></p>
+
           </div>
         </div>
       </nav>
@@ -123,7 +128,7 @@
                   </div>
                   <!-- Product actions-->
                   <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a routerLink="/login" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
+                    <div class="text-center"><a routerLink="/detail" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
 
                   </div>
               </div>
@@ -154,7 +159,7 @@
                   </div>
                   <!-- Product actions-->
                   <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a routerLink="/login" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
+                      <div class="text-center"><a routerLink="/detail" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
                   </div>
               </div>
           </div>
@@ -178,7 +183,7 @@
 
                   <!-- Product actions-->
                   <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a routerLink="/login" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
+                    <div class="text-center"><a routerLink="/detail" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
 
                   </div>
               </div>
@@ -206,7 +211,7 @@
                   </div>
                   <!-- Product actions-->
                   <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a routerLink="/login" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
+                    <div class="text-center"><a routerLink="/detail" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
 
                   </div>
               </div>
@@ -229,7 +234,7 @@
                   </div>
                   <!-- Product actions-->
                   <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a routerLink="/login" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
+                    <div class="text-center"><a routerLink="/detail" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
 
                   </div>
               </div>
@@ -249,7 +254,7 @@
                   </div>
                   <!-- Product actions-->
                   <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a routerLink="/login" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
+                    <div class="text-center"><a routerLink="/detail" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
 
                   </div>
               </div>
@@ -280,7 +285,7 @@
                   </div>
                   <!-- Product actions-->
                   <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a routerLink="/login" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
+                    <div class="text-center"><a routerLink="/detail" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
 
                   </div>
               </div>
@@ -308,7 +313,7 @@
                   </div>
                   <!-- Product actions-->
                   <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a routerLink="/login" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
+                    <div class="text-center"><a routerLink="/detail" class="btn btn-primary btn-outline-dark mt-auto" href="#">View details</a></div>
 
                   </div>
               </div>
@@ -336,7 +341,7 @@
       <div class="card  cat-item d-flex flex-column border mb-4">
         <a href="" class="cat-img position-relative overflow-hidden mb-3"></a>
         <p class="text-right m-2">100 Products</p>
-        <a routerLink="/login">
+        <a routerLink="/categories">
           <img src="assets/img/industria.png" class="img mt-2 card-img-top" alt="Imagen 2" />
         </a>
         <div class="card-body">
@@ -350,7 +355,7 @@
       <div class="card w-100 cat-item d-flex flex-column border mb-4">
         <a href="" class="cat-img position-relative overflow-hidden mb-3"></a>
         <p class="text-right m-2">100 Products</p>
-        <a routerLink="/login">
+        <a routerLink="/categories">
           <img src="assets/img/lap.png" class="img mt-2 card-img-top" alt="Imagen 2" /></a>
         <div class="card-body">
           <h5 class="card-title">Technology</h5>
@@ -363,7 +368,7 @@
       <div class="card   cat-item d-flex flex-column border mb-4">
         <a href="" class="cat-img position-relative overflow-hidden mb-3"></a>
         <p class="text-right m-2">100 Products</p>
-        <a routerLink="/login">
+        <a routerLink="/categories">
           <img src="assets/img/zapatos.png" class="img mt-2 card-img-top" alt="Imagen 3" /></a>
         <div class="card-body">
           <h5 class="card-title">Footwear</h5>
@@ -376,7 +381,7 @@
       <div class="card cat-item d-flex flex-column border mb-4">
         <a href="" class="cat-img position-relative overflow-hidden mb-3"></a>
         <p class="text-right m-2">100 Products</p>
-        <a routerLink="/login">
+        <a routerLink="/categories">
           <img src="assets/img/belleza.png" class="img mt-2 card-img-top" alt="Imagen 4" /></a>
         <div class="card-body">
           <h5 class="card-title">Personal Care</h5>
@@ -388,7 +393,7 @@
         <a href="" class="cat-img position-relative overflow-hidden mb-3"></a>
         <p class="text-right m-2">100 Products</p>
         <br />
-        <a routerLink="/login">
+        <a routerLink="/categories">
           <img src="assets/img/auto.png" class="img mt-2 card-img-top" width="80%" alt="Imagen 4" /></a>
         <div class="card-body">
           <br />
@@ -402,7 +407,7 @@
         <a href="" class="cat-img position-relative overflow-hidden mb-3"></a>
         <p class="text-right m-2">100 Products</p>
 
-        <a routerLink="/login"> <br>
+        <a routerLink="/categories"> <br>
           <img src="assets/img/ropa.png" class="img mt-2 card-img-top" alt="Imagen 3" /></a>
         <div class="card-body">
           <br>
