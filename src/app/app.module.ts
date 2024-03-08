@@ -15,6 +15,16 @@ import { NavvComponent } from './admin/navv/navv.component';
 import { AdminModule } from './admin/admin.module';
 import { MensajesClientesComponent } from './admin/mensajes-clientes/mensajes-clientes.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { AllproductsComponent } from './admin/allproducts/allproducts.component';
+
 
 
 
@@ -30,12 +40,14 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     AppComponent,
     ProductListComponent,
     AgregarProductoComponent,
-    UsuariosComponent,
     EmpresasComponent,
     ProductosComponent,
     NavvComponent,
     MensajesClientesComponent,
     DashboardComponent,
+    UsuariosComponent,
+    AllproductsComponent,
+  
   
    
    
@@ -49,8 +61,16 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     UserModule,
-    AdminModule,
     BrowserAnimationsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatPaginatorModule,
+    MatTableModule,
+    
     
   ],
   providers: [],

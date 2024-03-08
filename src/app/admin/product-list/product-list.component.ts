@@ -19,7 +19,7 @@ export class ProductListComponent {
     { nombre: 'Producto 3', detalles: 'Detalles del producto 3', stock: 8, precio: 80, imagen: 'URL_imagen_3' },
     { nombre: 'Producto 2', detalles: 'Detalles del producto 2', stock: 5, precio: 50, imagen: 'URL_imagen_2' },
     { nombre: 'Producto 3', detalles: 'Detalles del producto 3', stock: 8, precio: 80, imagen: 'URL_imagen_3' },
-    // Puedes agregar más productos aquí
+    
   ];
 
   constructor(private router: Router) {}
@@ -29,11 +29,11 @@ export class ProductListComponent {
   }
 
   eliminarProducto(producto: any) {
-    // Mostrar la alerta para confirmar la eliminación
+    
     const confirmar = confirm(`¿Estás seguro de que quieres eliminar el producto "${producto.nombre}"?`);
     
     if (confirmar) {
-      // Eliminar el producto de la lista
+     
       const index = this.productos.indexOf(producto);
       if (index > -1) {
         this.productos.splice(index, 1);

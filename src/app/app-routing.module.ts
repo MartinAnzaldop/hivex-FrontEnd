@@ -10,6 +10,7 @@ import { AgregarProductoComponent } from './admin/agregar-producto/agregar-produ
 import { UsuariosComponent } from './admin/usuarios/usuarios.component';
 import { ProductosComponent } from './admin/productos/productos.component';
 import { MensajesClientesComponent } from './admin/mensajes-clientes/mensajes-clientes.component';
+import { AllproductsComponent } from './admin/allproducts/allproducts.component';
 
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'usuarios', component: UsuariosComponent},
   { path: 'productos', component: ProductosComponent},
   { path: 'mensajes-clientes', component: MensajesClientesComponent},
+  { path: 'allproducts', component: AllproductsComponent},
   
   
   

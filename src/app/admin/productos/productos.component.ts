@@ -15,7 +15,7 @@ export class ProductosComponent implements OnInit {
       precio: 1299.99, 
       stock: 100,
       vendedor: 'Apple',
-      imagen: 'assets/img/Iphone15.png' // Ruta de la imagen para el iPhone 15
+      imagen: 'assets/img/Iphone15.png' 
     },
     { 
       nombre: 'Camisa de Vestir',
@@ -25,7 +25,7 @@ export class ProductosComponent implements OnInit {
       precio: 39.99, 
       stock: 50,
       vendedor: 'Fashion Inc.',
-      imagen: 'assets/img/camisa.png' // Ruta de la imagen para la camisa de vestir
+      imagen: 'assets/img/camisa.png'
     },
     { 
       nombre: 'Reloj de mano',
@@ -35,9 +35,9 @@ export class ProductosComponent implements OnInit {
       precio: 79.99, 
       stock: 50,
       vendedor: 'Fashion Inc.',
-      imagen: 'assets/img/watch.png' // Ruta de la imagen para la camisa de vestir
+      imagen: 'assets/img/watch.png' 
     },
-    // Agrega más productos según sea necesario
+   
   ];
 
   constructor() { }
@@ -46,12 +46,12 @@ export class ProductosComponent implements OnInit {
   }
 
   aprobarProducto(producto: any) {
-    // Lógica para aprobar el producto
+ 
     console.log('Producto aprobado:', producto);
   }
 
   rechazarProducto(producto: any) {
-    // Lógica para rechazar el producto
+ 
     console.log('Producto rechazado:', producto);
   }
 }
