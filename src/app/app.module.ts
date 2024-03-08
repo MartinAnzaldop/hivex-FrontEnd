@@ -38,6 +38,7 @@ import { SellerModule } from './seller/seller.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +51,7 @@ import { SellerModule } from './seller/seller.module';
     DashboardComponent,
     UsuariosComponent,
     AllproductsComponent,
+    
   
   
    
