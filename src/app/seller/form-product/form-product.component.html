@@ -1,51 +1,72 @@
 <app-header-seller></app-header-seller>
 <br><br>
+
+
 <div class="container">
   <div class="row ">
-      <div class="col-6 form mx-auto">
+      <div class="col-8 form mx-auto">
           <h2 class="text-center mb-4">Product Form</h2>
-          <form>
-            <div class="mb-3 row">
-                <label for="productName" class="form-label col-sm-2">Product Name</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="productName" placeholder="Enter the product name">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="price" class="form-label col-sm-2">Price</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" id="price" placeholder="Enter the price">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="stack" class="form-label col-sm-2">Stack</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" id="stack" placeholder="Enter the stack">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="description" class="form-label col-sm-2">Product Description</label>
-                <div class="col-sm-10">
-                    <textarea class="form-control" id="description" rows="3" placeholder="Enter the description"></textarea>
-                </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="description" class="form-label col-sm-2">Images</label>
-              <div class="col-sm-10">
-                <input type="file" class="form-control" id="stack" placeholder="Enter the stack">
-              </div>
-          </div>
-            <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-success" routerLink="/listProducts">Submit</button>
-                    <button type="submit" class="btn btn-danger ml-1" routerLink="/listProducts">Cancel</button>
-                </div>
-            </div>
-        </form>
-          <br>
+
+<form [formGroup]="ProductForm"  (ngSubmit)="addProduct()">
+  <!-- 2 column grid layout with text inputs for the first and last names -->
+  <div class="row mb-4">
+    <div class="col">
+      <div data-mdb-input-init class="form-outline">
+        <input type="text" formControlName="name" placeholder="Enter the name" class="form-control in" />
+        <label class="form-label" >Name product</label>
+      </div>
+    </div>
+    <div class="col">
+      <div data-mdb-input-init class="form-outline">
+        <input type="number" id="price" formControlName="price" placeholder="Enter the price" class="form-control in" />
+        <label class="form-label"  for="form6Example2">Price product</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="file" id="image" formControlName="image" class="form-control in" />
+    <label class="form-label"  for="form6Example3">Image</label>
+  </div>
+
+  <!-- Text input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="number" id="stock" formControlName="stock" placeholder="Enter the stock" class="form-control in" />
+    <label class="form-label"  for="form6Example4">Stock</label>
+  </div>
+
+  <!-- Email input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+
+    <select id="form6Example5" formControlName="category" class="form-control">
+        <option value="1">Electronics</option>
+        <option value="2">Clothing</option>
+        <option value="3">Books</option>
+        <option value="4">Home & Garden</option>
+        <option value="5">Sports & Outdoors</option>
+    </select>
+    <label class="form-label" id="category" for="form6Example5">Category</label>:
+  </div>
+
+
+
+  <!-- Message input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <textarea class="form-control" formControlName="description" placeholder="Enter the description product" id="description" rows="4"></textarea>
+    <label class="form-label"  for="form6Example7">Description product</label>
+  </div>
+
+
+
+  <!-- Submit button -->
+  <button data-mdb-ripple-init type="submit" class="btn in black btn-block mb-4">Create</button>
+</form>
       </div>
   </div>
 </div>
+
+
+
 <br><br><br><br><br><br><br><br>
 <app-footer></app-footer>
