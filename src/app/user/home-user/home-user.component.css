@@ -1,6 +1,9 @@
 .card {
-
-height: 310px;
+  -webkit-box-shadow: -7px 4px 14px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -7px 4px 14px 0px rgba(0,0,0,0.75);
+  box-shadow: -7px 4px 14px 0px rgba(0,0,0,0.75);
+border-radius: 10px;
+height: 410px;
 }
 
 .card-title{
@@ -31,8 +34,8 @@ height: 310px;
   filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
 }
 .prod{
-  height: 200px;
-  width: 150px;
+  height: 250px;
+  width: 200px;
   margin-left: 25px;
 
 }
@@ -66,8 +69,8 @@ height: 310px;
 
 @media (max-width: 768px) {
   .card {
-    height: 200px;
-    width: 150px;/*
+    height: 310px;
+    width: 200pc;/*
      Puedes ajustar este valor según tus necesidades */
   }
 

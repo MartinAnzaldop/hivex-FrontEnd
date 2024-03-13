@@ -26,8 +26,9 @@ height: 420px;
     width: 160px;
 
   }
-  .title{
-    font-size: 15px;
+  .card-title{
+    font-size: medium;
+    text-align: center;
   }
 
 }
