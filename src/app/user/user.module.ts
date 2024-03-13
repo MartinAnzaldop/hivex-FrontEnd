@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ContactComponent } from './contact/contact.component';
@@ -39,7 +39,8 @@ import { HomeUserComponent } from './home-user/home-user.component';
     CommonModule,
     AppRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
 
   ]
 })
