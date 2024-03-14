@@ -18,6 +18,10 @@ export class MensajesClientesComponent {
 
   constructor() { }
 
+  ngOnInit(): void {
+    console.log(this.comments); // Mostrar el arreglo de productos en consola
+  }
+
   openModal() {
     this.showModal = true;
   }

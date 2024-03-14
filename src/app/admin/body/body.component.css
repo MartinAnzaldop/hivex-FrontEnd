@@ -1,0 +1,22 @@
+.body {
+    width: calc(100% - 5rem); /* Ancho por defecto cuando el sidenav está abierto */
+    height: 100vh;
+    margin-left: 5rem;
+    z-index: 0;
+    position: relative;
+    top: 0;
+    transition: all 0.5s ease;
+    background: #f4f7fa;
+    padding: 3rem;
+  }
+  
+  .body-trimmed {
+    width: calc(100% - 16.5625rem); /* Ancho cuando el sidenav está colapsado */
+    margin-left: 16.5625rem;
+  }
+  
+  .body-md-screen {
+    width: calc(100% - 5rem); /* Ancho cuando el sidenav está colapsado en una pantalla pequeña */
+    margin-left: 5rem;
+  }
+  

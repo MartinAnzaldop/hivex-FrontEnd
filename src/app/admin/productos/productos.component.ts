@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosComponent implements OnInit {
   productos: any[] = [
-    { 
-      nombre: 'iPhone 15',
-      categoria: 'Tecnología',
+    { nombre: 'iPhone 15',categoria: 'Tecnología',
       detalle1: 'Pantalla OLED de 6.7 pulgadas',
       detalle2: 'Chip A16 Bionic',
       precio: 1299.99, 
@@ -43,6 +41,7 @@ export class ProductosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.productos); // Mostrar el arreglo de productos en consola
   }
 
   aprobarProducto(producto: any) {

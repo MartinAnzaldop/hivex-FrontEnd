@@ -1,3 +1,13 @@
 <router-outlet></router-outlet>
 <!--PAGINA DE REGISTRO-->
 <!--<app-register></app-register>-->
+<!-- app.component.html -->
+<app-sidenav *ngIf="showSidenav" (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<app-header
+[collapsed]="isSideNavCollapsed"
+[screenWidth]="screenWidth"
+></app-header>
+<app-body 
+[collapsed]="isSideNavCollapsed"
+[screenWidth]="screenWidth"
+></app-body>

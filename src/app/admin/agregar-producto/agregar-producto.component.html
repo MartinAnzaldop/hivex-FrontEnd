@@ -1,27 +1,25 @@
-<app-navv></app-navv>
-
 <div class="container">
     <h1>Agregar Producto</h1>
-    <form id="product-form" enctype="multipart/form-data">
+    <form id="product-form" (submit)="addProduct()" enctype="multipart/form-data" #productForm="ngForm">
         <div class="form-group">
             <label for="name">Nombre del Producto:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" ngModel required>
         </div>
         <div class="form-group">
             <label for="category">Categoría:</label>
-            <input type="text" id="category" name="category" required>
+            <input type="text" id="category" name="category" ngModel required>
         </div>
         <div class="form-group">
             <label for="price">Precio:</label>
-            <input type="number" id="price" name="price" required>
+            <input type="number" id="price" name="price" ngModel required>
         </div>
         <div class="form-group">
             <label for="stock">Stock:</label>
-            <input type="number" id="stock" name="stock" required>
+            <input type="number" id="stock" name="stock" ngModel required>
         </div>
         <div class="form-group">
             <label for="description">Descripción:</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
+            <textarea id="description" name="description" rows="4" ngModel required></textarea>
         </div>
         <div class="form-group">
             <label for="image">Imagen:</label>
@@ -29,4 +27,4 @@
         </div>
         <button type="submit">Agregar Producto</button>
     </form>
-  </div>
+</div>

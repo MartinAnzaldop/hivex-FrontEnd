@@ -17,6 +17,7 @@ import { AllproductsComponent } from './admin/allproducts/allproducts.component'
 
 
 import { SellerRoutingModule } from './seller/seller.routing';
+import { BodyComponent } from './admin/body/body.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,9 @@ const routes: Routes = [
   { path: 'productos', component: ProductosComponent},
   { path: 'mensajes-clientes', component: MensajesClientesComponent},
   { path: 'allproducts', component: AllproductsComponent},
+  { path: 'body', component: BodyComponent},
+  
+
   
   
   

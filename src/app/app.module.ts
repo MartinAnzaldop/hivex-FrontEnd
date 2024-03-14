@@ -26,6 +26,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { AllproductsComponent } from './admin/allproducts/allproducts.component';
 import { SellerModule } from './seller/seller.module';
+import { SidenavComponent } from './admin/sidenav/sidenav.component';
+import { BodyComponent } from './admin/body/body.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './admin/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -51,6 +56,9 @@ import { SellerModule } from './seller/seller.module';
     DashboardComponent,
     UsuariosComponent,
     AllproductsComponent,
+    SidenavComponent,
+    BodyComponent,
+    HeaderComponent,
     
   
   
@@ -77,7 +85,9 @@ import { SellerModule } from './seller/seller.module';
     MatButtonModule,
     MatPaginatorModule,
     MatTableModule,
-    
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     
 
     AdminModule,

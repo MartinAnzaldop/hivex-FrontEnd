@@ -6,6 +6,7 @@ import { EmpresasComponent } from './empresas/empresas.component';
 import { ProductosComponent } from './productos/productos.component';
 import { NavvComponent } from './navv/navv.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 
@@ -13,11 +14,13 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const routes: Routes = [
     {path: 'loginAdmin',component:LoginComponent},
-    {path: 'dashboardAdmin',component:DashboardComponent},
+    
     { path: 'empresas', component: EmpresasComponent},
     { path: 'productos', component: ProductosComponent},
     { path: 'navv', component: NavvComponent},
     { path: 'usuarios', component: UsuariosComponent},
+    { path: 'sidenav', component: SidenavComponent},
+
 
   
 

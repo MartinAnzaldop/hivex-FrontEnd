@@ -1,0 +1,24 @@
+<div class="sidenav" [ngClass]="collapsed  ? 'sidenav-collapsed': ''">
+    <div class="logo-container">
+        
+        <a class="logo" (click)="toggleCollapse()" >
+            <img src="assets/img/HIVEX.png" alt="Logo" width="90" height="64" >
+        </a>
+        <div class="logo-text" *ngIf="collapsed">ADMIN</div>
+        <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
+            <i class="fal fa-times close-icon"></i>
+        </button>
+    </div>
+    <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]" 
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            
+            >
+                <i class="sidenav-link-icon" [class]="data.icon"></i>
+                <span class="sidenav-link-text" *ngIf="collapsed">{{data.Label}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

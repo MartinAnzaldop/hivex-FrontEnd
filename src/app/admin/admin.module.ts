@@ -10,13 +10,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { SharedModule } from '../shared/shared.module';
 import { CommonModule } from '@angular/common';
-import { MensajesClientesComponent } from './mensajes-clientes/mensajes-clientes.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
+
 import { MatTableModule } from '@angular/material/table';
-import { NavvComponent } from './navv/navv.component';
+
 
 
 
@@ -24,6 +23,8 @@ import { NavvComponent } from './navv/navv.component';
 @NgModule({
   declarations: [
     LoginComponent,
+    
+  
    
  
 
@@ -46,7 +47,7 @@ import { NavvComponent } from './navv/navv.component';
     MatButtonModule,
     MatPaginatorModule,
     MatTableModule,
-  
+    
   
   ]
 })

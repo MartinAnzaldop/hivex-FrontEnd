@@ -7,6 +7,10 @@ interface Supplier{
   phone: string
 
 }
+interface SideNaavToggle{
+  screenWidth: number;
+  collapsed: boolean;
+}
 
 @Component({
   selector: 'app-usuarios',
@@ -45,6 +49,7 @@ export class UsuariosComponent  {
   pageSizes: Array<number> = [5, 10, 20];
 
   ngOnInit(){
+    console.log(this.suppliers); // Mostrar el arreglo de suppliers en consola
     this.visibleData();
     this.pageNumbers();
   }
@@ -88,6 +93,15 @@ export class UsuariosComponent  {
   changePageSize(pageSize: any) {
     this.pageSize = parseInt(pageSize);
     this.currentPage = 1; 
+  }
+
+  isSideNavCollapsed = false;
+  screenWidth = 0;
+
+  onToggleSideNav(data: SideNaavToggle): void{
+    this.screenWidth = data.screenWidth;
+    this.isSideNavCollapsed = data.collapsed;
+
   }
 
 }
