@@ -1,0 +1,89 @@
+.card {
+
+height: 310px;
+}
+
+.card-title{
+  font-size: large;
+  text-align: center;
+  font: weight 900;
+}
+
+.botton{
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.redondo{
+  border-radius: 10px;
+}
+.card img {
+  border-radius: 10px 10px 0 0;
+
+}
+.img{
+  width: 80%;
+  height: 80%;
+  object-position: center;
+  margin-left: 15px;
+}
+.img:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+.prod{
+  height: 200px;
+  width: 150px;
+  margin-left: 25px;
+
+}
+.empresa:hover{
+
+  transform: scale(1.1);
+}
+.empresa{
+  height: 250px;
+}
+.title{
+ /* Sintaxis clásica */
+  text-decoration: underline;
+
+  /* Sintaxis moderna */
+  text-decoration: 2px wavy overline gold;
+}
+
+.botton:hover{
+  box-shadow: inset 0 0 0 50px rgb(248, 211, 2);
+}
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+
+
+/* Media query para ajustar el diseño en pantallas más pequeñas aún */
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 200px;
+    width: 150px;/*
+     Puedes ajustar este valor según tus necesidades */
+  }
+
+  .prod{
+    height: 40%;
+    width: 70%;
+
+
+  }
+
+  .repartidor{
+width: 0px;
+
+  }
+  .card-title{
+    font-size: medium;
+    text-align: center;
+  }
+}

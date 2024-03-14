@@ -1,0 +1,34 @@
+.card {
+  -webkit-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+border-radius: 10px;
+height: 420px;
+}
+.img{
+  width: 80%;
+  height: 80%;
+  object-position: center;
+  margin-left: 15px;
+
+}
+.img:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+
+
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+
+
+@media (max-width: 768px) {
+  .card {
+    height: 350px;
+    width: 160px;
+
+  }
+  .card-title{
+    font-size: medium;
+    text-align: center;
+  }
+
+}

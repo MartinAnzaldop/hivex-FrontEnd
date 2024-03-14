@@ -1,0 +1,68 @@
+
+  .card {
+    -webkit-box-shadow: 0px 7px 29px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 29px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 29px 1px rgba(0,0,0,0.75);
+  border-radius: 10px;
+  height: 400px;
+
+}
+
+.icono-play {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px; /* Ajusta el tamaño según tus necesidades */
+  height: 50px;
+  background: url('/assets/img/play.png') center center no-repeat; /* Reemplaza 'icono_play.png' con la ruta de tu propio icono */
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+.icono-play:hover {
+
+  background: url('/assets/img/play-hover.png') center center no-repeat; /* Reemplaza 'icono_play.png' con la ruta de tu propio icono */
+
+}
+
+.img{
+
+
+  -moz-border-radius: 28px 29px 0px 0px;
+  -webkit-border-radius: 28px 29px 0px 0px;
+  border: 14px none #f7ff03;
+  height: 260px;
+  width: 100%;
+  border-radius: 10px;
+
+}
+
+.title{
+  /* Sintaxis clásica */
+   text-decoration: underline;
+   -webkit-text-stroke-width: 1px;
+
+   -webkit-text-stroke-color: rgb(0, 0, 0);
+margin-top: 10px ;
+   /* Sintaxis moderna */
+   text-decoration: 2px wavy overline gold;
+ }
+
+ @media (max-width: 768px) {
+  .card {
+    height: 400px;
+margin-top: 40px;
+
+  }
+  .card-title{
+    font-size: medium;
+    text-align: center;
+  }
+  .textUni{
+   text-align: center;
+    font-palette: --Purples;
+
+  }
+}

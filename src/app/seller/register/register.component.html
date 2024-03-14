@@ -1,0 +1,68 @@
+
+
+<app-header-user></app-header-user>
+<app-navbar></app-navbar>
+
+
+
+<div class="h-registration-background">
+  <div class="h-registration-container">
+      <div class="h-horizontal-layout">
+          <div class="h-registration-header">
+              <h2 class="h-main-title">COMPANY REGISTRATION</h2>
+          </div>
+          <div class="h-image-container">
+              <img class="img-fluid h-logo" src="assets/img/company1.png" alt="HIVEX">
+          </div>
+          <div class="h-content-container">
+              <p class="h-image-caption">Enter the company details</p>
+              <div class="h-underline"></div>
+              <div class="h-registration-form-wrapper">
+                  <div class="h-form-overlay">COMPANY DETAILS</div>
+                  <form (ngSubmit)="onSubmit()" class="h-registration-form">
+                      <div class="h-form-group2">
+                          <label for="companyName">COMPANY NAME:</label>
+                          <input type="text" id="companyName" name="companyName" [(ngModel)]="companyName" placeholder="Enter the company name" required />
+                      </div>
+
+                      <div class="h-form-group">
+                          <label for="country">COUNTRY:</label>
+                          <input type="text" id="country" name="country" [(ngModel)]="country" placeholder="Enter your country" required />
+                      </div>
+
+                      <div class="h-form-group">
+                          <label for="productType">PRODUCT TYPE:</label>
+                          <input type="text" id="productType" name="productType" [(ngModel)]="productType" placeholder="Enter the product type" required />
+                      </div>
+
+                      <div class="h-form-group">
+                          <label for="countryCode">PHONE:</label>
+                          <div class="phone-container">
+                              <input type="tel" id="countryCode" name="countryCode" [(ngModel)]="countryCode" placeholder="+" maxlength="4" required />
+                              <input type="tel" id="phone" name="phone" [(ngModel)]="phone" (input)="onPhoneChange($event)" maxlength="11" placeholder="Enter the phone number" required />
+                          </div>
+                      </div>
+
+                      <div class="h-form-group">
+                          <label for="contactName">CONTACT PERSON'S NAME:</label>
+                          <input type="text" id="contactName" name="contactName" [(ngModel)]="contactName" placeholder="Enter the contact person's name" required />
+                      </div>
+
+                      <div class="h-form-group">
+                          <label for="contactRFC">CONTACT PERSON'S RFC:</label>
+                          <input type="text" id="contactRFC" name="contactRFC" [(ngModel)]="contactRFC" placeholder="Enter the contact person's RFC" required />
+                      </div>
+                      <br>
+
+
+                      <button type="submit" routerLink="/dashboardSeller" class="h-submit-button">Register Company</button>
+
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+

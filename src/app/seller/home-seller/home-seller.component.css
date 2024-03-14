@@ -1,0 +1,27 @@
+.img{
+  border-radius: 10px;
+  align-items: center;
+}
+
+.cards{
+  -webkit-box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 400px;
+    margin-bottom: 20px;
+
+
+  }
+  .card-title{
+    font-size: medium;
+    text-align: center;
+  }
+
+}
+
+

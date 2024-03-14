@@ -1,0 +1,27 @@
+.form{
+  border-radius: 10px;
+  border-color: rgb(231, 1, 1);
+  background-color: gold;
+}
+
+.form-label{
+  color: black;
+}
+
+.in{
+  border-color: rgb(0, 0, 0);
+
+}
+
+.black{
+  color: black;
+  background-color: gold;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    margin-bottom: 5px;
+  }
+
+
+}

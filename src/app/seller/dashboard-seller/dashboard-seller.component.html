@@ -1,0 +1,86 @@
+<app-header-seller></app-header-seller>
+<div class="container-fluid mt-4">
+  <div class="row">
+    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item nav">
+            <a class="nav-link active" href="#">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Chats
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Statistics
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card cards">
+            <a routerLink="/listProducts">
+            <img src="assets/img/productos.jpg"  class="img card-img-top" alt="Imagen de la tarjeta 1"></a>
+            <div class="card-body">
+              <h5 class="card-title">My products</h5>
+             
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card cards">
+            <img src="assets/img/chats.jpg" class="img card-img-top" alt="Imagen de la tarjeta 2">
+            <div class="card-body">
+              <h5 class="card-title">Chats</h5>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card cards">
+            <a routerLink="/orders">
+            <img src="assets/img/pedidos.jpg" class="img card-img-top" alt="Imagen de la tarjeta 3"></a>
+            <div class="card-body">
+              <h5 class="card-title">Orders</h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card cards">
+            <a routerLink="/statistics">
+            <img src="assets/img/esta.jpg" class="img card-img-top" alt="Imagen de la tarjeta 1"></a>
+            <div class="card-body">
+              <h5 class="card-title">Statistics</h5>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<app-footer></app-footer>
