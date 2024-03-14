@@ -10,6 +10,8 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { UniversityComponent } from './university/university.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeSellerComponent } from '../seller/home-seller/home-seller.component';
+import { HomeUserComponent } from './home-user/home-user.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,7 @@ const routes: Routes = [
     {path: 'university',component:UniversityComponent},
     {path: 'login',component:LoginComponent},
     {path: 'register',component:RegisterComponent},
+    {path: 'home',component:HomeUserComponent},
 ];
 
 

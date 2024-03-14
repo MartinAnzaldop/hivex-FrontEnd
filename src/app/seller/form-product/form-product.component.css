@@ -1,6 +1,6 @@
 .form{
   border-radius: 10px;
-  border-color: blue;
+  border-color: rgb(231, 1, 1);
   background-color: gold;
 }
 
@@ -8,7 +8,15 @@
   color: black;
 }
 
+.in{
+  border-color: rgb(0, 0, 0);
 
+}
+
+.black{
+  color: black;
+  background-color: gold;
+}
 
 @media (max-width: 768px) {
   .btn {
