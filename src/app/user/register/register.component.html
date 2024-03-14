@@ -1,5 +1,4 @@
 <app-header-user></app-header-user>
-
 <div class="container-fluid mb-5">
   <div class="row border-top px-xl-5">
     <div class="col-lg-12">
@@ -16,7 +15,6 @@
           <div class="navbar-nav mr-auto py-0">
             <a href="index.html" routerLink="/inicio" class="nav-item nav-link active">Home</a>
             <a href="shop.html" routerLink="/categories" class="nav-item nav-link">Products</a>
-
             <div class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
               <div class="dropdown-menu rounded-0 m-0">
@@ -52,29 +50,29 @@
               <div class="col-lg-6 mb-5 mb-lg-0">
                 <div class="card">
                   <div class="card-body py-5 px-md-5">
-                    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+                    <form [formGroup]="UserForm"  (ngSubmit)="addUser()" #registerForm="ngForm" novalidate>
                       <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="form3Example1" class="form-control" [(ngModel)]="firstName" name="firstName" required />
+                            <input type="text" id="form3Example1" class="form-control" formControlName="firstName" name="firstName" required />
                             <label class="form-label" for="form3Example1">First name</label>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="form3Example2" class="form-control" [(ngModel)]="lastName" name="lastName" required />
+                            <input type="text" id="form3Example2" class="form-control" formControlName="lastName" name="lastName" required />
                             <label class="form-label" for="form3Example2">Last name</label>
                           </div>
                         </div>
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input type="email" id="form3Example3" class="form-control" [(ngModel)]="email" name="email" required />
+                        <input type="email" id="form3Example3" class="form-control" formControlName="email" name="email" required />
                         <label class="form-label" for="form3Example3">Email address</label>
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input type="password" id="form3Example4" class="form-control" [(ngModel)]="password" name="password" required />
+                        <input type="password" id="form3Example4" class="form-control" formControlName="password" name="password" required />
                         <label class="form-label" for="form3Example4">Password</label>
                       </div>
 
