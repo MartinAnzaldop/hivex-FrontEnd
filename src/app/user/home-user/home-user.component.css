@@ -1,9 +1,15 @@
 .card {
-  -webkit-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+  
 border-radius: 10px;
 height: 410px;
+}
+
+.category{
+  -webkit-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: -14px 10px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+  height: 410px;
 }
 
 .card-title{
