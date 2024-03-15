@@ -1,8 +1,6 @@
 <app-header-user></app-header-user>
-
 <div class="container-fluid mb-5">
   <div class="row border-top px-xl-5">
-
     <div class="col-lg-12">
       <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
         <a href="" class="text-decoration-none d-block d-lg-none">
@@ -17,7 +15,6 @@
           <div class="navbar-nav mr-auto py-0">
             <a href="index.html" routerLink="/inicio" class="nav-item nav-link active">Home</a>
             <a href="shop.html" routerLink="/categories" class="nav-item nav-link">Products</a>
-
             <div class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
               <div class="dropdown-menu rounded-0 m-0">
@@ -34,7 +31,6 @@
         </div>
       </nav>
 
-
       <!-- Section: Design Block -->
       <section class="">
         <!-- Jumbotron -->
@@ -47,51 +43,41 @@
                   <span class="text-primary">your best option</span>
                 </h1>
                 <p style="color: hsl(217, 10%, 50.8%)">
-                  hivex is an application for user and sellers where you can negotiate and buy products
+                  hivex is an application for users and sellers where you can negotiate and buy products
                 </p>
               </div>
 
               <div class="col-lg-6 mb-5 mb-lg-0">
                 <div class="card">
                   <div class="card-body py-5 px-md-5">
-                    <form>
-                      <!-- 2 column grid layout with text inputs for the first and last names -->
+                    <form [formGroup]="UserForm"  (ngSubmit)="addUser()" #registerForm="ngForm" novalidate>
                       <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="form3Example1" class="form-control" />
+                            <input type="text" id="form3Example1" class="form-control" formControlName="name" name="firstName" required />
                             <label class="form-label" for="form3Example1">First name</label>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="form3Example2" class="form-control" />
+                            <input type="text" id="form3Example2" class="form-control"  name="lastName" required />
                             <label class="form-label" for="form3Example2">Last name</label>
                           </div>
                         </div>
                       </div>
 
-                      <!-- Email input -->
                       <div class="form-outline mb-4">
-                        <input type="email" id="form3Example3" class="form-control" />
+                        <input type="email" id="form3Example3" class="form-control" formControlName="email" name="email" required />
                         <label class="form-label" for="form3Example3">Email address</label>
                       </div>
 
-                      <!-- Password input -->
                       <div class="form-outline mb-4">
-                        <input type="password" id="form3Example4" class="form-control" />
+                        <input type="password" id="form3Example4" class="form-control" formControlName="password" name="password" required />
                         <label class="form-label" for="form3Example4">Password</label>
                       </div>
 
-                      <!-- Checkbox -->
+                      <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
 
-
-                      <!-- Submit button -->
-                      <button type="submit" routerLink="/login" class="btn btn-primary btn-block mb-4">
-                        Sign up
-                      </button>
-
-                      <!-- Register buttons -->
                       <div class="text-center">
                         <p>or sign up with:</p>
                         <button type="button" class="btn btn-link btn-floating mx-1">
@@ -117,6 +103,7 @@
             </div>
           </div>
         </div>
-        <!-- Jumbotron -->
       </section>
-      <!-- Section: Design Block -->
+    </div>
+  </div>
+</div>

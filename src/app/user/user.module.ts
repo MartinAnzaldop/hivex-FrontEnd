@@ -14,6 +14,8 @@ import { UniversityComponent } from './university/university.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeUserComponent } from './home-user/home-user.component';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @NgModule({
