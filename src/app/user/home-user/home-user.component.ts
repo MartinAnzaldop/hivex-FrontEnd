@@ -10,7 +10,7 @@ emailRecu: string='';
   constructor() { }
 
   ngOnInit(): void {
-
+this.info();
   }
 
 info(){

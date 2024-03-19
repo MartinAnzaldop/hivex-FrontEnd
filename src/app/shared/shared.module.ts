@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderSellerComponent } from './header-seller/header-seller.component';
 import { UserModule } from '../user/user.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,12 @@ import { UserModule } from '../user/user.module';
     BrowserModule,
     FooterComponent,
     NavbarComponent,
-    HeaderSellerComponent
+    HeaderSellerComponent,
+
 
 
   ],
 
-  imports:[BrowserModule, RouterModule,]
+  imports:[BrowserModule, RouterModule, FormsModule, ReactiveFormsModule]
 })
 export class SharedModule { }

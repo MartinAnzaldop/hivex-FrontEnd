@@ -11,14 +11,15 @@ import { ToastrService } from 'ngx-toastr';
 export class NavbarComponent implements OnInit {
 
   constructor(private toastr: ToastrService,
-     private router: Router) { }
+    private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
   }
 
 
   logOut(){
-
+    
+    localStorage.removeItem('email');
     this.router.navigate(['/inicio'])
     this.toastr.error('You have successfully logged out','Goodbye!');
   }
