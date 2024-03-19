@@ -15,7 +15,12 @@ import { OrdersComponent } from './orders/orders.component';
 import { FormProductComponent } from './form-product/form-product.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { RegisterComponent } from './register/register.component';
+
 import { HttpClientModule } from '@angular/common/http';
+
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 
 
 

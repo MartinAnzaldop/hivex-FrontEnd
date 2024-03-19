@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderSellerComponent } from './header-seller/header-seller.component';
+import { UserModule } from '../user/user.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,6 @@ import { HeaderSellerComponent } from './header-seller/header-seller.component';
 
   ],
 
-  imports:[BrowserModule, RouterModule]
+  imports:[BrowserModule, RouterModule,]
 })
 export class SharedModule { }
