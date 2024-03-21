@@ -50,52 +50,61 @@
               <div class="col-lg-6 mb-5 mb-lg-0">
                 <div class="card">
                   <div class="card-body py-5 px-md-5">
-                    <form [formGroup]="UserForm"  (ngSubmit)="addUser()" #registerForm="ngForm" novalidate>
+                    <form [formGroup]="UserForm" (ngSubmit)="addUser()" #registerForm="ngForm" novalidate>
                       <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="form3Example1" class="form-control" formControlName="name" name="firstName" required />
-                            <label class="form-label" for="form3Example1">First name</label>
+                            <label class="form-label" for="form3Example1">First name</label> <br>
+
+                            <input type="text" id="form3Example1" placeholder="Enter name" class="form-control"
+                              formControlName="name" name="firstName" required />
+                            <span *ngIf="UserForm.get('name')?.hasError('required') && UserForm.get('name')?.touched"
+                              class="text-danger errorLabel">
+                              <strong>Name</strong> it is required.
+                            </span>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="form3Example2" class="form-control"  name="lastName" required />
-                            <label class="form-label" for="form3Example2">Last name</label>
+                            <label class="form-label" for="form3Example3">Email address</label> <br>
+
+                            <input type="email" id="form3Example3" placeholder="Enter email" class="form-control"
+                              formControlName="email" name="email" required />
+                            <span *ngIf="UserForm.get('email')?.hasError('required') && UserForm.get('email')?.touched"
+                              class="text-danger errorLabel">
+                              <strong>Email</strong> it is required.
+                            </span>
+                            <span *ngIf="UserForm.get('email')?.hasError('email') && UserForm.get('email')?.touched" class="text-danger errorLabel">
+                              <strong>Email</strong> It's not valid
+                            </span>
                           </div>
                         </div>
                       </div>
 
-                      <div class="form-outline mb-4">
-                        <input type="email" id="form3Example3" class="form-control" formControlName="email" name="email" required />
-                        <label class="form-label" for="form3Example3">Email address</label>
-                      </div>
+
 
                       <div class="form-outline mb-4">
-                        <input type="password" id="form3Example4" class="form-control" formControlName="password" name="password" required />
                         <label class="form-label" for="form3Example4">Password</label>
+                        <input type="password" id="form3Example4" placeholder="Enter password" class="form-control"
+                          formControlName="password" name="password" required />
+                        <span
+                          *ngIf="UserForm.get('password')?.hasError('required') && UserForm.get('password')?.touched"
+                          class="text-danger errorLabel">
+                          <strong>Password</strong> it is required.
+                        </span>
+                        <span *ngIf="UserForm.get('password')?.hasError('minlength') && UserForm.get('password')?.touched" class="text-danger errorLabel">
+                          <strong>Password</strong> It must have a minimum of 6 characters.
+                         </span>
+                      </div>
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example5">Confirmation</label>
+                        <input type="password" id="form3Example5" placeholder="Enter password" class="form-control"
+                          name="confirmation" formControlName="confirmation" />
                       </div>
 
-                      <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+                      <button type="submit" [disabled]="UserForm.invalid" class="btn btn-primary btn-block mb-4">Sign up</button>
 
-                      <div class="text-center"> 
-                        <p>or sign up with:</p>
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                          <i class="fab fa-facebook-f"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                          <i class="fab fa-google"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                          <i class="fab fa-twitter"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-link btn-floating mx-1">
-                          <i class="fab fa-github"></i>
-                        </button>
-                      </div>
+                      
                     </form>
                   </div>
                 </div>

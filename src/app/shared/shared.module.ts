@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderSellerComponent } from './header-seller/header-seller.component';
 import { UserModule } from '../user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderInicioComponent } from './header-inicio/header-inicio.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
     FooterComponent,
     NavbarComponent,
-    HeaderSellerComponent
+    HeaderSellerComponent,
+    HeaderInicioComponent
 
   ],
   exports: [
@@ -29,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     NavbarComponent,
     HeaderSellerComponent,
+    HeaderInicioComponent
 
 
 

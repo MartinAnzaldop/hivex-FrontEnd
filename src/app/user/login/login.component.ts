@@ -18,8 +18,8 @@ LoginForm: FormGroup;
 constructor(private toastr: ToastrService,
   private fb: FormBuilder, private router: Router,) {
     this.LoginForm=this.fb.group({
-        email:['', Validators.required],
-        password:['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
    })
 }
 ngOnInit(): void {
@@ -30,7 +30,7 @@ ngOnInit(): void {
     const Login: Login  = {
       email: this.LoginForm.get('email')?.value,
       password: this.LoginForm.get('password')?.value,
-      rol: 'user'
+      
     }
 
     this.emailEnviado=this.LoginForm.get('email')?.value,
@@ -41,6 +41,6 @@ ngOnInit(): void {
     this.toastr.success('You have successfully logged in','Welcome! to Hivex');
   }
 
-  
+
 
 }

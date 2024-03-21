@@ -21,12 +21,12 @@
 
 
 
-            <a  routerLink="/university" class="nav-item nav-link">University</a>
+            <a routerLink="/university" class="nav-item nav-link">University</a>
             <a href="contact.html" routerLink="/contact" class="nav-item nav-link">Contact</a>
           </div>
           <div class="navbar-nav ml-auto py-0">
-            <a  routerLink="/login" class="nav-item nav-link">Login</a>
-            <a routerLink="/register"  class="nav-item nav-link">Register</a>
+            <a routerLink="/login" class="nav-item nav-link">Login</a>
+            <a routerLink="/register" class="nav-item nav-link">Register</a>
           </div>
         </div>
       </nav>
@@ -35,69 +35,89 @@
 </div>
 
 
-  <!-- Jumbotron -->
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
-    <div class="container">
-      <div class="row gx-lg-5 align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0">
-          <h1 class="my-5 display-3 fw-bold ls-tight">
-            WELCOME  <br /> TO
-            <span class="text-primary">HIVEX</span>
-          </h1>
-          <p style="color: hsl(217, 10%, 50.8%)">
-            HIVEX is an application for user and sellers where you can negotiate and buy products
-          </p>
-        </div>
+<!-- Jumbotron -->
+<div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+  <div class="container">
+    <div class="row gx-lg-5 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h1 class="my-5 display-3 fw-bold ls-tight">
+          WELCOME <br /> TO
+          <span class="text-primary">HIVEX</span>
+        </h1>
+        <p style="color: hsl(217, 10%, 50.8%)">
+          HIVEX is an application for user and sellers where you can negotiate and buy products
+        </p>
+      </div>
 
-        <div class="col-lg-6 mb-5 mb-lg-0">
-          <div class="card">
-            <div class="card-body py-5 px-md-5">
-              <form [formGroup]="LoginForm"  (ngSubmit)="login()">
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <H1>LOGIN</H1>
-                <div class="row">
-                </div>
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card">
+          <div class="card-body py-5 px-md-5">
+            <form [formGroup]="LoginForm" (ngSubmit)="login()">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <H1>LOGIN</H1>
+              <div class="row">
+              </div>
 
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" placeholder="Enter your email" formControlName="email" id="form3Example3" class="form-control" />
-                  <label class="form-label" for="form3Example3">Email address</label>
-                </div>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example3">Email address</label>
+                <input type="email" placeholder="Enter your email" formControlName="email" id="form3Example3"
+                  class="form-control" />
 
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input type="password" placeholder="Enter your password" formControlName="password" id="form3Example4" class="form-control" />
-                  <label class="form-label" for="form3Example4">Password</label>
-                </div>
+                <span *ngIf="LoginForm.get('email')?.hasError('required') && LoginForm.get('email')?.touched"
+                  class="text-danger errorLabel">
+                  <strong>Email</strong> it is required.
+                </span>
+                <span *ngIf="LoginForm.get('email')?.hasError('email') && LoginForm.get('email')?.touched"
+                  class="text-danger errorLabel">
+                  <strong>Email</strong> It's not valid
+                </span>
+              </div>
 
-                <!-- Checkbox -->
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example4">Password</label>
+                <input type="password" placeholder="Enter your password" formControlName="password" id="form3Example4"
+                  class="form-control" />
+
+                <span *ngIf="LoginForm.get('password')?.hasError('required') && LoginForm.get('password')?.touched"
+                  class="text-danger errorLabel">
+                  <strong>Password</strong> it is required.
+                </span>
+                <span *ngIf="LoginForm.get('password')?.hasError('minlength') && LoginForm.get('password')?.touched"
+                  class="text-danger errorLabel">
+                  <strong>Password</strong> It must have a minimum of 6 characters.
+                </span>
+              </div>
+
+              <!-- Checkbox -->
 
 
-                <!-- Submit button -->
-                <button type="submit"  class="btn btn-primary btn-block mb-4">
-                  Sign in
+              <!-- Submit button -->
+              <button type="submit" [disabled]="LoginForm.invalid" class="btn btn-primary btn-block mb-4">
+                Sign in
+              </button>
+
+              <!-- Register buttons -->
+              <div class="text-center">
+                <a routerLink="/register">
+                  <p>Not a member? Register</p>
+                </a>
+                
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
                 </button>
 
-                <!-- Register buttons -->
-                <div class="text-center">
-                 <a routerLink="/register"><p >Not a member? Register</p></a>
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
 
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                  </button>
-
-
-                </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
 
