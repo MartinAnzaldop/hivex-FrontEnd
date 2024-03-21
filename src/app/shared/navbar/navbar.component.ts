@@ -18,8 +18,8 @@ export class NavbarComponent implements OnInit {
 
 
   logOut(){
-    
-    localStorage.removeItem('email');
+
+    localStorage.clear();
     this.router.navigate(['/inicio'])
     this.toastr.error('You have successfully logged out','Goodbye!');
   }

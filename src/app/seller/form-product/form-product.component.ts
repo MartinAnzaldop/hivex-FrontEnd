@@ -5,7 +5,7 @@ import { Product } from '../../models/products';
 import { Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 
- 
+
 
 
 
@@ -40,7 +40,7 @@ export class FormProductComponent implements OnInit {
       category: this.ProductForm.get('category')?.value,
       description: this.ProductForm.get('description')?.value
     }
-
+ 
      this._productService.addProduct(Product).subscribe(dato=>{
       this.router.navigate(['/listProducts'])
     }, error=>{

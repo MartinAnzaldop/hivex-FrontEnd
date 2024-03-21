@@ -1,5 +1,5 @@
-export class Login{
+export class LoginUser{
     email: string='';
     password: string='';
-    
+
 }

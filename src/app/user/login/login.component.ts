@@ -1,8 +1,12 @@
+import { LoginUser } from './../../models/login';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Login } from 'src/app/models/login';
+import { LoginService } from 'src/app/services/login.service';
+import config from '../../../../capacitor.config';
+
+
 
 
 
@@ -12,35 +16,49 @@ import { Login } from 'src/app/models/login';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-emailEnviado: string='';
-LoginForm: FormGroup;
+  emailEnviado: string = '';
+  LoginForm: FormGroup;
+  id: string = '';
+  name: string = '';
 
-constructor(private toastr: ToastrService,
-  private fb: FormBuilder, private router: Router,) {
-    this.LoginForm=this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-   })
-}
-ngOnInit(): void {
 
-}
 
-  login(){
-    const Login: Login  = {
-      email: this.LoginForm.get('email')?.value,
-      password: this.LoginForm.get('password')?.value,
-      
-    }
 
-    this.emailEnviado=this.LoginForm.get('email')?.value,
-    console.log('email forms'+this.emailEnviado);
-    localStorage.setItem('email', JSON.stringify(this.emailEnviado));
-    this.router.navigate(['/home'])
-    console.log('email enviado'+this.emailEnviado);
-    this.toastr.success('You have successfully logged in','Welcome! to Hivex');
+  constructor(private toastr: ToastrService,
+    private fb: FormBuilder, private router: Router, private _Login: LoginService) {
+    this.LoginForm = new FormGroup({
+      email: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+    })
+  }
+  ngOnInit(): void {
+
   }
 
+  login(LoginUser: LoginUser) {
+    this._Login.login(LoginUser).subscribe(
+      response => {
+        // Manejar la respuesta de la API en caso de éxito
+        console.log(response);	
+        localStorage.setItem('userId', response.createUser.id);
+          localStorage.setItem('userName', response.createUser.name);
 
+        if (response && response.createUser && response.createUser.id) {
 
+          this.router.navigate(['/home']);
+          this.toastr.success('Welcome to "Hivex"', 'Login successfull');
+        } else {
+
+          this.toastr.error('Email o contraseña incorrectos', 'Error en el inicio de sesión');
+        }
+      },
+      error => {
+
+        this.toastr.error('User incorrect', 'Error');
+      }
+    );
+  }
 }
+
+
+

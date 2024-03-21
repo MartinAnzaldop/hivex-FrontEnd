@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-user.component.css']
 })
 export class HomeUserComponent implements OnInit {
-emailRecu: string='';
+  name: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
-this.info();
+    this.info();
   }
 
-info(){
-  this.emailRecu=JSON.parse(localStorage.getItem('email')||'{}');
-  console.log('email recuperado',this.emailRecu);
-}
-
+  info() {
+    this.name = localStorage.getItem('userName') || ''; // Provide a default value of an empty string
+    console.log(this.name);
+  }
 }

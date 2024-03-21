@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-seller.component.css']
 })
 export class HomeSellerComponent implements OnInit {
+  dateCompany: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
+    this.dateCompany = localStorage.getItem('companyId') ?? '';
+    console.log(this.dateCompany);
   }
-
 }

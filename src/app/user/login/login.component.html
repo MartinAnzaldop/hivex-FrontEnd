@@ -52,7 +52,7 @@
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="card">
           <div class="card-body py-5 px-md-5">
-            <form [formGroup]="LoginForm" (ngSubmit)="login()">
+            <form [formGroup]="LoginForm" (ngSubmit)="login(LoginForm.value)">
               <!-- 2 column grid layout with text inputs for the first and last names -->
               <H1>LOGIN</H1>
               <div class="row">
@@ -103,7 +103,7 @@
                 <a routerLink="/register">
                   <p>Not a member? Register</p>
                 </a>
-                
+
 
                 <button type="button" class="btn btn-link btn-floating mx-1">
                   <i class="fab fa-google"></i>
