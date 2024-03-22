@@ -18,6 +18,7 @@ import { ToastrService } from 'ngx-toastr';
 export class FormProductComponent implements OnInit {
   ProductForm: FormGroup;
   user_id: string = '';
+  loading = false;
   constructor(private fb: FormBuilder, private router: Router,
     private Toast: ToastrService, private _productService: ProductService) {
     this.ProductForm=this.fb.group({
@@ -35,6 +36,7 @@ export class FormProductComponent implements OnInit {
   }
 
   addProduct(){
+    this.loading = true;
      const Product: Product  = {
       name: this.ProductForm.get('name')?.value,
       price: this.ProductForm.get('price')?.value,
@@ -44,6 +46,7 @@ export class FormProductComponent implements OnInit {
       description: this.ProductForm.get('description')?.value,
       user_id: localStorage.getItem('userId') || ''
     }
+    this.loading = true; // Mostrar spinner
     console.log(Product);
      this._productService.addProduct(Product).subscribe(dato=>{
       this.router.navigate(['/listProducts'])

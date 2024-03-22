@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   LoginForm: FormGroup;
   id: string = '';
   name: string = '';
+  loading = false;
 
 
 
@@ -36,10 +37,11 @@ export class LoginComponent implements OnInit {
   }
 
   login(LoginUser: LoginUser) {
+    this.loading = true;
     this._Login.login(LoginUser).subscribe(
       response => {
         // Manejar la respuesta de la API en caso de éxito
-        console.log(response);	
+        console.log(response);
         localStorage.setItem('userId', response.createUser.id);
           localStorage.setItem('userName', response.createUser.name);
 
@@ -47,13 +49,14 @@ export class LoginComponent implements OnInit {
 
           this.router.navigate(['/home']);
           this.toastr.success('Welcome to "Hivex"', 'Login successfull');
+          this.loading = false;
         } else {
-
+this.loading = false;
           this.toastr.error('Email o contraseña incorrectos', 'Error en el inicio de sesión');
         }
       },
       error => {
-
+this.loading = false;
         this.toastr.error('User incorrect', 'Error');
       }
     );

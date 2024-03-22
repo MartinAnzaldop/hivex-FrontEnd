@@ -11,6 +11,7 @@ import { HeaderSellerComponent } from './header-seller/header-seller.component';
 import { UserModule } from '../user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderInicioComponent } from './header-inicio/header-inicio.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderInicioComponent } from './header-inicio/header-inicio.component';
     FooterComponent,
     NavbarComponent,
     HeaderSellerComponent,
-    HeaderInicioComponent
+    HeaderInicioComponent,
+    SpinnerComponent
 
   ],
   exports: [

@@ -41,7 +41,7 @@
 
     <select id="form6Example5" formControlName="category" class="form-control">
         <option value="1">Electronics</option>
-        <option value="2">Clothing</option> 
+        <option value="2">Clothing</option>
         <option value="3">Books</option>
         <option value="4">Home & Garden</option>
         <option value="5">Sports & Outdoors</option>
@@ -58,9 +58,15 @@
   </div>
 
 
-
+  <div class="d-flex justify-content-center align-items-center">
+    <button class="btn btn-success" [disabled]="loading" *ngIf="loading">
+      <span class="spinner-border spinner-border-sm mb-2"></span>
+      Loading..
+    </button>
+  </div> <br> 
   <!-- Submit button -->
-  <button data-mdb-ripple-init type="submit" class="btn in black btn-block mb-4">Create</button>
+  <button *ngIf="!loading" data-mdb-ripple-init type="submit" class="btn in black btn-block mb-4">Create</button>
+
 </form>
       </div>
   </div>

@@ -91,10 +91,15 @@
               </div>
 
               <!-- Checkbox -->
-
+              <div class="d-flex justify-content-center align-items-center">
+                <button class="btn btn-success" [disabled]="loading" *ngIf="loading">
+                  <span class="spinner-border spinner-border-sm mb-2"></span>
+                  Loading..
+                </button>
+              </div> <br>
 
               <!-- Submit button -->
-              <button type="submit" [disabled]="LoginForm.invalid" class="btn btn-primary btn-block mb-4">
+              <button type="submit" *ngIf="!loading" [disabled]="LoginForm.invalid" class="btn btn-primary btn-block mb-4">
                 Sign in
               </button>
 
