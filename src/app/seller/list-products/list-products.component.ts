@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/models/products';
 import { ProductService } from 'src/app/services/product.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-list-products',
@@ -10,7 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ListProductsComponent implements OnInit {
   listProducts:Product []=[];
-  constructor(private router: Router, private _productService: ProductService) { }
+  constructor(private router: Router, private _productService: ProductService, private Toast: ToastrService) { }
 
   ngOnInit(): void {
     this.getProducts()
@@ -25,10 +26,11 @@ export class ListProductsComponent implements OnInit {
     })
   }
 
-  deleteProduct(id:any){
-    this._productService.deleteProduct(id).subscribe(data=>{
+  deleteProduct(_id:any){
+    this._productService.deleteProduct(_id).subscribe(data=>{
     this.getProducts();
     this.router.navigate(['/listProducts'])
+    this.Toast.info('Product deleted successfully', 'Success');
     },error=>{
       console.log(error)
     })
