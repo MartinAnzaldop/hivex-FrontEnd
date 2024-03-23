@@ -1,33 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { UserModule } from './user/user.module';
-import { AdminModule } from './admin/admin.module';
-import { SellerModule } from './seller/seller.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AngularFireModule } from '@angular/fire/compat'; // Importa AngularFireModule
+import { AngularFireAuthModule } from '@angular/fire/compat/auth'; // Importa AngularFireAuthModule
+import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { AdminModule } from './admin/admin.module';
+import { SellerModule } from './seller/seller.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-
-
-
   ],
   imports: [
-    HttpClientModule,
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
-    UserModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig), // Inicializa Firebase aquí
+    AngularFireAuthModule,
     AdminModule,
     SellerModule,
-    FormsModule,
-    HttpClientModule
+    UserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -75,20 +75,28 @@
                 <button type="submit" routerLink="/home" class="btn btn-primary btn-block mb-4">
                   Sign in
                 </button>
+                or Sign in with:<br>
+                <button type="button" class="btn btn-link btn-floating mx-1" (click)="signInWithGoogle()">
+                  <i class="fab fa-google"></i>
+                </button>
 
                 <!-- Register buttons -->
                 <div class="text-center">
                  <a routerLink="/register"><p >Not a member? Register</p></a>
-                  <button type="button" class="btn btn-link btn-floating mx-1">
+                  <!--<button type="button" class="btn btn-link btn-floating mx-1">
                     <i class="fab fa-facebook-f"></i>
-                  </button>
+                  </button>-->
 
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                  </button>
+
 
 
                 </div>
+
+                
+
+
+
+
               </form>
             </div>
           </div>

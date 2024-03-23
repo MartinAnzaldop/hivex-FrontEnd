@@ -48,13 +48,20 @@
               </div>
 
               <div class="col-lg-6 mb-5 mb-lg-0">
+                
                 <div class="card">
+                  
                   <div class="card-body py-5 px-md-5">
+                    <H1>REGISTER</H1><br>
                     <form [formGroup]="UserForm"  (ngSubmit)="addUser()" #registerForm="ngForm" novalidate>
                       <div class="row">
+                        
                         <div class="col-md-6 mb-4">
+                          
                           <div class="form-outline">
+                            
                             <input type="text" id="form3Example1" class="form-control" formControlName="name" name="firstName" required />
+                            
                             <label class="form-label" for="form3Example1">First name</label>
                           </div>
                         </div>
@@ -78,15 +85,18 @@
 
                       <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
 
+
+
                       <div class="text-center">
                         <p>or sign up with:</p>
                         <button type="button" class="btn btn-link btn-floating mx-1">
                           <i class="fab fa-facebook-f"></i>
                         </button>
 
-                        <button type="button" class="btn btn-link btn-floating mx-1">
+                        <button type="button" class="btn btn-link btn-floating mx-1" (click)="signInWithGoogle()">
                           <i class="fab fa-google"></i>
                         </button>
+                        
 
                         <button type="button" class="btn btn-link btn-floating mx-1">
                           <i class="fab fa-twitter"></i>
@@ -95,6 +105,10 @@
                         <button type="button" class="btn btn-link btn-floating mx-1">
                           <i class="fab fa-github"></i>
                         </button>
+                        <br>
+                        You already have an account?
+                        <br><br>
+                        <button type="button" routerLink="/login" class="btn btn-primary btn-block mb-4">Login</button>
                       </div>
                     </form>
                   </div>
