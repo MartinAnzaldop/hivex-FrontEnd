@@ -1,13 +1,13 @@
 const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyDa4dpnsO023Sv8jLbENoberTyrLQBPtQ4',
-    authDomain: 'hivex-d0918.firebaseapp.com',
-    projectId: 'hivex-d0918',
-    storageBucket: 'hivex-d0918.appspot.com',
-    messagingSenderId: '826526920819',
-    appId: '1:826526920819:web:466119e34bab3e5718ba06',
-    measurementId: 'G-Y6PQCH9QKV',
+    apiKey: "AIzaSyD4DZqv4U_fUeTlz7EW2iaRN4te9m1qWAU",
+    authDomain: "hivex0.firebaseapp.com",
+    projectId: "hivex0",
+    storageBucket: "hivex0.appspot.com",
+    messagingSenderId: "939425848070",
+    appId: "1:939425848070:web:0945f5555f55e16d8f5c87",
+    measurementId: "G-07VW7DH196",
 
   },
 
