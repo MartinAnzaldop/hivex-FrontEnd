@@ -1,43 +1,70 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/models/add-product';
+import { ProductService } from 'src/app/services/add-product.service';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
+  listProducts:Product []=[];
 
-  productos = [
-    { nombre: 'Producto 1', detalles: 'Detalles del producto 1', stock: 10, precio: 100, imagen: 'URL_imagen_1' },
-    { nombre: 'Producto 2', detalles: 'Detalles del producto 2', stock: 5, precio: 50, imagen: 'URL_imagen_2' },
-    { nombre: 'Producto 3', detalles: 'Detalles del producto 3', stock: 8, precio: 80, imagen: 'URL_imagen_3' },
-    { nombre: 'Producto 4', detalles: 'Detalles del producto 4', stock: 15, precio: 120, imagen: 'URL_imagen_4' },
-    { nombre: 'Producto 2', detalles: 'Detalles del producto 2', stock: 5, precio: 50, imagen: 'URL_imagen_2' },
-    { nombre: 'Producto 3', detalles: 'Detalles del producto 3', stock: 8, precio: 80, imagen: 'URL_imagen_3' },
-    { nombre: 'Producto 2', detalles: 'Detalles del producto 2', stock: 5, precio: 50, imagen: 'URL_imagen_2' },
-    { nombre: 'Producto 3', detalles: 'Detalles del producto 3', stock: 8, precio: 80, imagen: 'URL_imagen_3' },
-    { nombre: 'Producto 2', detalles: 'Detalles del producto 2', stock: 5, precio: 50, imagen: 'URL_imagen_2' },
-    { nombre: 'Producto 3', detalles: 'Detalles del producto 3', stock: 8, precio: 80, imagen: 'URL_imagen_3' },
-    
-  ];
+  currentPage: number = 1;
+  pageSize: number = 5;
+  pageSizes: Array<number> = [5, 10, 20];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private productService: ProductService) { }
+
+  ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts(){
+    this.productService.getProducts().subscribe(data=>{
+      console.log(data.products);
+      this.listProducts=data.products;
+    },error=>{
+    console.log(error)
+    })
+  }
 
   agregarProducto() {
     this.router.navigate(['/agregar-producto']);
   }
 
-  eliminarProducto(producto: any) {
-    
-    const confirmar = confirm(`¿Estás seguro de que quieres eliminar el producto "${producto.nombre}"?`);
-    
-    if (confirmar) {
-     
-      const index = this.productos.indexOf(producto);
-      if (index > -1) {
-        this.productos.splice(index, 1);
-      }
-    }
+  deleteProduct(id:any){
+    this.productService.deleteProduct(id).subscribe(data=>{
+    this.getProducts();
+    this.router.navigate(['/product-list'])
+    },error=>{
+      console.log(error)
+    })
+  }
+
+
+
+
+  nextPage() {
+    this.currentPage++;
+  }
+
+  previousPage() {
+    this.currentPage--;
+  }
+
+  pageNumbers(): number[] {
+    const totalPages = Math.ceil(this.listProducts.length / this.pageSize);
+    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  }
+
+  changePage(pageNumber: number) {
+    this.currentPage = pageNumber;
+  }
+
+  changePageSize(pageSize: any) {
+    this.pageSize = parseInt(pageSize, 10);
+    this.currentPage = 1;
   }
 }

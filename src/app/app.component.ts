@@ -25,7 +25,7 @@ export class AppComponent {
   }
   shouldShowSidenav(url: string): boolean {
     // Aquí verificamos si la ruta actual es 'dashboard' o 'usuarios'
-    return url.includes('/dashboard') || url.includes('/usuarios') || url.includes('/agregar-producto') || url.includes('/empresas') || url.includes('/allproducts') || url.includes('/product-list');
+    return url.includes('/dashboard') || url.includes('/usuarios') || url.includes('/agregar-producto') || url.includes('/empresas') || url.includes('/allproducts') || url.includes('/product-list')|| url.includes('/mensajes-clientes');
   }
 
 

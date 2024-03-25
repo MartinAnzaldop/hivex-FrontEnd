@@ -3,10 +3,12 @@
 <!--<app-register></app-register>-->
 <!-- app.component.html -->
 <app-sidenav *ngIf="showSidenav" (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
-<app-header
+
+<app-header *ngIf="showSidenav"
 [collapsed]="isSideNavCollapsed"
 [screenWidth]="screenWidth"
 ></app-header>
+
 <app-body 
 [collapsed]="isSideNavCollapsed"
 [screenWidth]="screenWidth"
