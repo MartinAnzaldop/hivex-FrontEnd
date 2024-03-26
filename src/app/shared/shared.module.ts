@@ -11,7 +11,9 @@ import { HeaderSellerComponent } from './header-seller/header-seller.component';
 import { UserModule } from '../user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderInicioComponent } from './header-inicio/header-inicio.component';
-import { SpinnerComponent } from './spinner/spinner.component';
+import { NavbarInitComponent } from './navbar-init/navbar-init.component';
+
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SpinnerComponent } from './spinner/spinner.component';
     NavbarComponent,
     HeaderSellerComponent,
     HeaderInicioComponent,
-    SpinnerComponent
+    NavbarInitComponent,
+
+
 
   ],
   exports: [
@@ -33,9 +37,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     FooterComponent,
     NavbarComponent,
     HeaderSellerComponent,
-    HeaderInicioComponent
-
-
+    HeaderInicioComponent,
+    NavbarInitComponent
 
   ],
 

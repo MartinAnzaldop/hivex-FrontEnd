@@ -9,6 +9,8 @@ import { ChatsComponent } from './chats/chats.component';
 import { OrdersComponent } from './orders/orders.component';
 import { RegisterComponent } from './register/register.component';
 
+import { LoginSellerComponent } from './login-seller/login-seller.component';
+
 
 
 const routes: Routes = [
@@ -19,7 +21,8 @@ const routes: Routes = [
     {path: 'chats',component:ChatsComponent},
     {path: 'orders',component:OrdersComponent},
     {path: 'statistics',component:StatisticsComponent},
-    {path: 'registerSeller',component:RegisterComponent}
+    {path: 'registerSeller',component:RegisterComponent},
+    {path: 'loginSeller',component:LoginSellerComponent}
 
 
 ];

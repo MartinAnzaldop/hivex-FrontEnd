@@ -1,5 +1,39 @@
 <app-header-user></app-header-user>
-<app-navbar></app-navbar>
+<div class="container-fluid">
+  <div class="row border-top px-xl-5">
+    <div class="col-lg-12">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+        <a href="" class="text-decoration-none d-block d-lg-none">
+          <h1 class="m-0 display-5 font-weight-semi-bold">
+            <img src="assets/img/HIVEXed.png" alt="" />
+          </h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <div class="navbar-nav mr-auto py-0">
+            <a routerLink="/inicio" class="nav-item nav-link ">Home</a>
+
+
+
+            <a routerLink="/university" class="nav-item nav-link">University</a>
+            <a routerLink="/contact" class="nav-item nav-link">Contact</a>
+            <a routerLink="/homeSeller" class="nav-item nav-link">Seller</a>
+          </div>
+          <div class="navbar-nav ml-auto py-0">
+            <a href="" routerLink="/loginSeller" class="nav-item nav-link">Login seller</a>
+            <a routerLink="/registerSeller" class="nav-item nav-link">Register seller</a>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Navbar End -->
 
 <!-- Topbar End -->
 <!-- Navbar Start -->
@@ -33,9 +67,8 @@
                   <h3 class="display-4 text-white font-weight-semi-bold mb-4">
                     Expand your business
                   </h3>
-                  <a *ngIf="dateCompany != null && dateCompany != ''" routerLink="/dashboardSeller"
-                    class="btn btn-light py-2 px-3">Welcome</a>
-                  <a *ngIf="dateCompany == null || dateCompany == ''" routerLink="/registerSeller"
+
+                  <a  routerLink="/loginSeller"
                     class="btn btn-light py-2 px-3">Start now</a>
 
                 </div>
@@ -51,10 +84,8 @@
                   <h3 class="display-4 text-white font-weight-semi-bold mb-4">
                     Sell your product to the world
                   </h3>
-                  <a *ngIf="dateCompany != null && dateCompany != ''" routerLink="/dashboardSeller"
-                    class="btn btn-light py-2 px-3">Welcome</a>
-                  <a *ngIf="dateCompany == null || dateCompany == ''" routerLink="/registerSeller"
-                    class="btn btn-light py-2 px-3">Start now</a>
+
+                  <a routerLink="/loginSeller" class="btn btn-light py-2 px-3">Start now</a>
 
                 </div>
               </div>
@@ -70,10 +101,8 @@
                 <h3 class="display-4 text-white font-weight-semi-bold mb-4">
                   Reasonable Price
                 </h3>
-                <a *ngIf="dateCompany != null && dateCompany != ''" routerLink="/dashboardSeller"
-                  class="btn btn-light py-2 px-3">Welcome</a>
-                <a *ngIf="dateCompany == null || dateCompany == ''" routerLink="/registerSeller"
-                  class="btn btn-light py-2 px-3">Start now</a>
+
+                <a routerLink="/loginSeller" class="btn btn-light py-2 px-3">Start now</a>
 
 
               </div>

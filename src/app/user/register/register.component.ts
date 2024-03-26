@@ -51,9 +51,9 @@ export class RegisterComponent implements OnInit {
       this.toastr.info('check your email', 'check your email');
       console.log(User)
     }, error => {
+      this.loading = false;
+      this.toastr.error('Error', 'Error');
       console.log(error);
     })
   }
-
-
 }

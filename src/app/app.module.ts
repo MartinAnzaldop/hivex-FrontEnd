@@ -17,11 +17,10 @@ import { SharedModule } from './shared/shared.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-
-
 
   ],
   imports: [
@@ -31,7 +30,7 @@ import { SharedModule } from './shared/shared.module';
     UserModule,
     AdminModule,
     SellerModule,
-    
+
 
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added

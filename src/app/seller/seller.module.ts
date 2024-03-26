@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { LoginSellerComponent } from './login-seller/login-seller.component';
 
 
 
@@ -33,7 +34,8 @@ import { Router } from '@angular/router';
     OrdersComponent,
     FormProductComponent,
     StatisticsComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginSellerComponent
 
   ],
   exports: [
