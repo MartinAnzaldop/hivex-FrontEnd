@@ -25,6 +25,7 @@ import { UserModule } from './user/user.module';
     AdminModule,
     SellerModule,
     UserModule,
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
