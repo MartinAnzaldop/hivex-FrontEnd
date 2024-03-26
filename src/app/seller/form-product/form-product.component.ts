@@ -2,6 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Product } from '../../models/products';
+import { Router } from '@angular/router';
+import { ProductService } from 'src/app/services/product.service';
 
  
 
@@ -14,7 +16,7 @@ import { Product } from '../../models/products';
 })
 export class FormProductComponent implements OnInit {
   ProductForm: FormGroup;
-  constructor(private fb: FormBuilder ) {
+  constructor(private fb: FormBuilder, private router: Router, private _productService: ProductService) {
     this.ProductForm=this.fb.group({
       name:['', Validators.required],
       price:['', Validators.required],
@@ -38,7 +40,12 @@ export class FormProductComponent implements OnInit {
       category: this.ProductForm.get('category')?.value,
       description: this.ProductForm.get('description')?.value
     }
-    console.log(Product);
-  }
+
+     this._productService.addProduct(Product).subscribe(dato=>{
+      this.router.navigate(['/listProducts'])
+    }, error=>{
+    console.log(error);
+    })
+    }
 
 }

@@ -3,39 +3,9 @@
 
 <div class="container-fluid mt-4">
   <div class="row">
-    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-      <div class="position-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item nav">
-            <a class="nav-link active" href="#">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Chats
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Orders
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Statistics
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
-    <main class="col-md- ms-sm-auto col-lg-10 px-md-4">
+
+    <main class="col-md-12 ms-sm-auto col-lg-12 ">
 
       <h1 class="text-center">List of products</h1>
       <div class="container-fluid pt-5">
@@ -46,94 +16,35 @@
               <thead class="bg-secondary text-dark">
                 <tr>
                   <th>Products</th>
+                  <th>Image</th>
                   <th>Price</th>
                   <th>Description</th>
-                  <th>Total</th>
+                  <th>Stock</th>
                   <th>Actions</th>
                 </tr>
               </thead>
-              <tbody class="align-middle">
+              <tbody class="align-middle" *ngFor="let products of listProducts">
                 <tr>
-                  <td class="align-middle"><img src="/assets/img/shp1.png" alt="" style="width: 50px;"> Colorful Stylish
-                    Shirt
-                  </td>
-                  <td class="align-middle">$350</td>
                   <td class="align-middle">
-                    <p>Thermos item</p>
+                    <p>{{products.name}}</p>
+
                   </td>
-                  <td class="align-middle">150</td>
+                  <td>{{products.image}}</td>
+                  <td class="align-middle">{{products.price}}</td>
+                  <td class="align-middle">
+                    {{products.description}}
+                  </td>
+                  <td class="align-middle">{{products.stock}}</td>
                   <td class="align-middle">
                     <button class="btn btn-info">Edit</button>
-                    <button class="btn btn-danger ml-1">Delete</button>
+                    <button (click)="deleteProduct(products.id)" class="btn btn-danger ml-1">Delete</button>
                     <button class="btn btn-success ml-1">Post</button>
                   </td>
                 </tr>
-                <tr>
-                  <td class="align-middle"><img src="/assets/img/shp2.png" alt="" style="width: 50px;"> Colorful Stylish
-                    Shirt
-                  </td>
-                  <td class="align-middle">$150</td>
-                  <td class="align-middle">
-                    <p>Thermos item</p>
-                  </td>
-                  <td class="align-middle">250</td>
-                  <td class="align-middle">
-                    <button class="btn btn-info">Edit</button>
-                    <button class="btn btn-danger ml-1">Delete</button>
-                    <button class="btn btn-success ml-1">Post</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><img src="/assets/img/shp3.png" alt="" style="width: 50px;"> Colorful Stylish
-                    Shirt
-                  </td>
-                  <td class="align-middle">$1250</td>
-                  <td class="align-middle">
-                    <p>Thermos item</p>
-                  </td>
-                  <td class="align-middle">50</td>
-                  <td class="align-middle">
-                    <button class="btn btn-info">Edit</button>
-                    <button class="btn btn-danger ml-1">Delete</button>
-                    <button class="btn btn-success ml-1">Post</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><img src="/assets/img/shp4.png" alt="" style="width: 50px;"> Colorful Stylish
-                    Shirt
-                  </td>
-                  <td class="align-middle">$2150</td>
-                  <td class="align-middle">
-                    <p>Thermos item</p>
-                  </td>
-                  <td class="align-middle">150</td>
-                  <td class="align-middle">
-                    <button class="btn btn-info">Edit</button>
-                    <button class="btn btn-danger ml-1">Delete</button>
-                    <button class="btn btn-success ml-1">Post</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle"><img src="/assets/img/shp5.png" alt="" style="width: 50px;"> Colorful Stylish
-                    Shirt
-                  </td>
-                  <td class="align-middle">$500</td>
-                  <td class="align-middle">
-                    <div class="input-group quantity mx-auto" style="width: 100px;">
-                      <div class="input-group-btn">
 
 
-                        <p>Thermos item</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="align-middle">50</td>
-                  <td class="align-middle">
-                    <button class="btn btn-info">Edit</button>
-                    <button class="btn btn-danger ml-1">Delete</button>
-                    <button class="btn btn-success ml-1">Post</button>
-                  </td>
-                </tr>
+
+
               </tbody>
             </table>
           </div>
