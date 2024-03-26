@@ -98,31 +98,31 @@
                 </button>
               </div> <br>
 
-              <!-- Submit button -->
-              <button type="submit" *ngIf="!loading" [disabled]="LoginForm.invalid" class="btn btn-primary btn-block mb-4">
-                Sign in
-              </button>
-
-              <!-- Register buttons -->
-              <div class="text-center">
-                <a routerLink="/register">
-                  <p>Not a member? Register</p>
-                </a>
-
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-google"></i>
+                <!-- Submit button -->
+                <button type="submit" routerLink="/home" class="btn btn-primary btn-block mb-4">
+                  Sign in
                 </button>
 
+                <!-- Register buttons -->
+                <div class="text-center">
+                 <a routerLink="/register"><p >Not a member? Register</p></a>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
 
-              </div>
-            </form>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                  </button>
+
+
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
