@@ -1,16 +1,9 @@
 
-
-
-
-
+<div class="body" [ngClass]="getBodyClass">
+  
 <div class="container">
   <div class="table-container">
-    <div class="search-container">
-      <input type="text" placeholder="Search" class="search-input" >
-      <select class="border p-2 rounded-lg" #pageSize (change)="changePageSize(pageSize.value)">
-        <option *ngFor="let size of pageSizes" [value]="size">{{size}}</option>
-      </select>
-    </div>
+   
 
     <table class="data-table">
       <thead>
@@ -24,7 +17,7 @@
         </tr>
       </thead>
       <tbody id="tableBody">
-        <tr *ngFor="let product of listProducts; let i = index" class="border-b hover:bg-gray-100">
+        <tr *ngFor="let product of listProducts.slice((currentPage - 1) * pageSize, currentPage * pageSize); let i = index" class="border-b hover:bg-gray-100">
           <td class="p-3">{{product.stock}}</td>
           <td class="p-3">{{product.name}}</td>
           <td class="p-3"><img [src]="product.image" alt="" style="max-width: 100px;"></td>
@@ -32,7 +25,7 @@
           <td class="p-3">{{product.price}}</td>
           <td class="p-3">
             <button class="detail">Edit</button>
-            <button (click)="deleteProduct(product.id)" class="detail">Delete</button>
+            <button (click)="deleteProduct(product._id)" class="detail">Delete</button>
             <button class="detail">Details</button>
           </td>
         </tr>
@@ -50,3 +43,4 @@
 
   <button class="detail2" (click)="agregarProducto()">Agregar Producto</button>
   
+</div>

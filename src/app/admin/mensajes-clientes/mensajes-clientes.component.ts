@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mensajes-clientes',
@@ -51,5 +51,17 @@ export class MensajesClientesComponent {
       comment.showForm = false;
       comment.showReplyButton = true; 
     });
+  }
+  @Input() collapsed = false;
+  @Input() screenWidth = 0;
+
+  get getBodyClass(): string {
+    let styleClass = '';
+    if (this.collapsed && this.screenWidth > 768) {
+      styleClass = 'body-trimmed';
+    } else if (this.collapsed && this.screenWidth <= 768 && this.screenWidth > 0) {
+      styleClass = 'body-md-screen';
+    }
+    return styleClass;
   }
 }

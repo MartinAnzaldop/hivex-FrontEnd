@@ -24,7 +24,7 @@
     "@capacitor/angular": "^2.0.3",
     "@capacitor/core": "latest",
     "angular-webstorage-service": "^1.0.2",
-    "ngx-toastr": "^14.0.0",
+    "ngx-toastr": "^14.3.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

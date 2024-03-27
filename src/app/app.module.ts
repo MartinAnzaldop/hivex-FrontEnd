@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
+import { RouterModule } from '@angular/router';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { ProductListComponent } from './admin/product-list/product-list.component';
 import { AgregarProductoComponent } from './admin/agregar-producto/agregar-producto.component';
-import { UsuariosComponent } from './admin/usuarios/usuarios.component';
+
 import { EmpresasComponent } from './admin/empresas/empresas.component';
 import { ProductosComponent } from './admin/productos/productos.component';
 import { NavvComponent } from './admin/navv/navv.component';
@@ -28,9 +29,7 @@ import { AllproductsComponent } from './admin/allproducts/allproducts.component'
 import { SellerModule } from './seller/seller.module';
 import { SidenavComponent } from './admin/sidenav/sidenav.component';
 import { BodyComponent } from './admin/body/body.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './admin/header/header.component';
-import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -45,7 +44,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 
@@ -61,7 +60,7 @@ import { SharedModule } from './shared/shared.module';
     NavvComponent,
     MensajesClientesComponent,
     DashboardComponent,
-    UsuariosComponent,
+  
     AllproductsComponent,
     SidenavComponent,
     BodyComponent,
@@ -83,6 +82,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     UserModule,
+    RouterModule,
 
     BrowserAnimationsModule,
     MatSidenavModule,

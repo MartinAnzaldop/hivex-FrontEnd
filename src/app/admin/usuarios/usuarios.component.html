@@ -1,33 +1,31 @@
-
+<div class="body" [ngClass]="getBodyClass">
+  
 <div class="container">
   <div class="table-container">
-    <div class="search-container">
-      <input type="text" placeholder="Search" class="search-input" #filter (keyup)="filterData(filter.value)">
-      <select class="border p-2 rounded-lg" #pageSize (change)="changePageSize(pageSize.value)">
-        <option *ngFor="let size of pageSizes" [value]="size">{{size}}</option>
-      </select>
-    </div>
-
+    
     <table class="data-table">
       <thead>
         <tr>
           <th>#</th>
-          <th>Supplier</th>
-          <th>Address</th>
+          <th>Name</th>
           <th>Email</th>
-          <th>Phone</th>
+          <th>Rol ID</th>
+          <th>Token</th>
           <th>Action</th>
         </tr>
       </thead>
-      <tbody id="tableBody">
-        <tr *ngFor="let supplier of visibleData(); let i = index" class="border-b hover:bg-gray-100">
+      <tbody id="tableBody" *ngIf="listUsers">
+        <tr *ngFor="let user of listUsers.slice((currentPage - 1) * pageSize, currentPage * pageSize); let i = index" class="border-b hover:bg-gray-100">
           <td class="p-3">{{i+1}}</td>
-          <td class="p-3">{{supplier.username}}</td>
-          <td class="p-3">{{supplier.address}}</td>
-          <td class="p-3">{{supplier.email}}</td>
-          <td class="p-3">{{supplier.phone}}</td>
-          <td class="p-3"><button class="detail">Edit</button><button class="detail">Delete</button><button class="detail">Details</button></td>
-          
+          <td class="p-3">{{user.name}}</td>
+          <td class="p-3">{{user.email}}</td>
+          <td class="p-3">{{user.rol_id}}</td>
+          <td class="p-3">{{user.token}}</td>
+          <td class="p-3">
+            <button class="detail">Edit</button>
+            <button class="detail">Delete</button>
+            <button class="detail">Details</button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -38,4 +36,5 @@
     <button *ngFor="let pageNumber of pageNumbers(); let i = index" class="btn bg-cyan-500  px-4 py-2 rounded-lg mx-1" [class.bg-cyan-700]="i+1 == currentPage" [class.text-gray-600]="i+1 != currentPage" (click)="changePage(i+1)">{{i+1}}</button>
     <button class="btn bg-cyan-500 px-4 py-2 rounded-r-lg ml-2" (click)="nextPage()">Next</button>
   </div>
+</div>
 </div>

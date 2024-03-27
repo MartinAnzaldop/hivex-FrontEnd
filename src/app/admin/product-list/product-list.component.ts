@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/models/add-product';
 import { ProductService } from 'src/app/services/add-product.service';
@@ -9,11 +9,12 @@ import { ProductService } from 'src/app/services/add-product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  listProducts:Product []=[];
+  listProducts: Product []=[];
 
   currentPage: number = 1;
   pageSize: number = 5;
-  pageSizes: Array<number> = [5, 10, 20];
+  pageSizes: number[] = [5, 10, 20];
+
 
   constructor(private router: Router, private productService: ProductService) { }
 
@@ -22,8 +23,8 @@ export class ProductListComponent implements OnInit {
   }
 
   getProducts(){
-    this.productService.getProducts().subscribe(data=>{
-      console.log(data.products);
+    this.productService.getProducts().subscribe(
+      data=>{
       this.listProducts=data.products;
     },error=>{
     console.log(error)
@@ -42,7 +43,6 @@ export class ProductListComponent implements OnInit {
       console.log(error)
     })
   }
-
 
 
 
@@ -66,5 +66,19 @@ export class ProductListComponent implements OnInit {
   changePageSize(pageSize: any) {
     this.pageSize = parseInt(pageSize, 10);
     this.currentPage = 1;
+  }
+
+  
+  @Input() collapsed = false;
+  @Input() screenWidth = 0;
+
+  get getBodyClass(): string {
+    let styleClass = '';
+    if (this.collapsed && this.screenWidth > 768) {
+      styleClass = 'body-trimmed';
+    } else if (this.collapsed && this.screenWidth <= 768 && this.screenWidth > 0) {
+      styleClass = 'body-md-screen';
+    }
+    return styleClass;
   }
 }
