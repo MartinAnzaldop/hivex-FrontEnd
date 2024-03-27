@@ -41,6 +41,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -72,6 +79,7 @@ import { HttpClientModule } from '@angular/common/http';
 
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     UserModule,
@@ -92,6 +100,14 @@ import { HttpClientModule } from '@angular/common/http';
 
     AdminModule,
     SellerModule,
+    
+
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
+
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,10 +28,12 @@
                 "output": "/"}
             ],
             "styles": [
-              "src/custom-theme.scss",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           },
           "configurations": {
             "production": {

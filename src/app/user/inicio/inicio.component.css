@@ -1,7 +1,5 @@
 .card {
-  -webkit-box-shadow: -17px 2px 37px -15px rgba(0,0,0,0.75);
-  -moz-box-shadow: -17px 2px 37px -15px rgba(0,0,0,0.75);
-  box-shadow: -17px 2px 37px -15px rgba(0,0,0,0.75);
+
 border-radius: 10px;
 height: 410px;
 }
@@ -15,6 +13,14 @@ height: 410px;
 .botton{
   background-color: aliceblue;
   border-radius: 5px;
+}
+
+.category{
+  -webkit-box-shadow: -17px 2px 37px -15px rgba(0,0,0,0.75);
+  -moz-box-shadow: -17px 2px 37px -15px rgba(0,0,0,0.75);
+  box-shadow: -17px 2px 37px -15px rgba(0,0,0,0.75);
+  border-radius: 10px;
+height: 410px;
 }
 
 .redondo{
