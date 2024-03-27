@@ -52,6 +52,8 @@ export class FormProductComponent implements OnInit {
       this.router.navigate(['/listProducts'])
       this.Toast.success('Product added successfully', 'Success');
     }, error=>{
+      this.Toast.error('Error adding product', 'Error');
+      this.loading = false; // Ocultar spinner
     console.log(error);
     })
     }

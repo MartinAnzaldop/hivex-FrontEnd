@@ -17,18 +17,21 @@ import { Toast, ToastrService } from 'ngx-toastr';
 })
 export class RegisterComponent implements OnInit {
   CompanyForm: FormGroup;
-  user_id: string = '';
-  companyExist: string = '';
+  loading = false;
 
   constructor(private fb: FormBuilder, private router: Router, private _CompanyService: CompanyService
-    , private Toast: ToastrService) {
+    , private Toast: ToastrService, private toastr: ToastrService) {
     this.CompanyForm=this.fb.group({
       companyName:['', Validators.required],
       companyCountry:['', Validators.required],
       productType:['', Validators.required],
       companyPhone:['', Validators.required],
       companyContact:['', Validators.required],
-      companyRfc:['', Validators.required]
+      companyRfc:['', Validators.required],
+      companyEmail:['', Validators.required],
+      companyPassword:['', Validators.required],
+      companyConfirmation:['', Validators.required]
+
   })
   }
 
@@ -45,10 +48,19 @@ export class RegisterComponent implements OnInit {
       companyPhone: this.CompanyForm.get('companyPhone')?.value,
       companyContact: this.CompanyForm.get('companyContact')?.value,
       companyRfc: this.CompanyForm.get('companyRfc')?.value,
-      user_id: this.user_id = localStorage.getItem('userId') || ''
+      companyEmail: this.CompanyForm.get('companyEmail')?.value,
+      companyPassword: this.CompanyForm.get('companyPassword')?.value,
+      companyConfirmation: this.CompanyForm.get('companyPassword')?.value,
+
     }
+    if (this.CompanyForm.get('companyPassword')?.value !== this.CompanyForm.get('companyConfirmation')?.value) {
+      this.toastr.error('Las contraseñas ingresadas deben ser las mismas', 'Error');
+      this.loading = false;
+     return;
+
+   }
     this._CompanyService.addCompnay(Company).subscribe(dato=>{
-      this.router.navigate(['/homeSeller'])
+      this.router.navigate(['/loginSeller'])
       this.Toast.success('Company added successfully', 'Success');
       console.log(dato);
       console.log(dato.company._id);
@@ -56,7 +68,6 @@ export class RegisterComponent implements OnInit {
     }, error=>{
     console.log(error);
     })
-
 
   }
 
