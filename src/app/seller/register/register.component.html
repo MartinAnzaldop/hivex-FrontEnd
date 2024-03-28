@@ -1,69 +1,115 @@
-
-
 <app-header-user></app-header-user>
-<app-navbar></app-navbar>
+
+
+<div class="container-fluid">
+  <div class="row border-top px-xl-5">
+    <div class="col-lg-12">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+        <a href="" class="text-decoration-none d-block d-lg-none">
+          <h1 class="m-0 display-5 font-weight-semi-bold">
+            <img src="assets/img/HIVEXed.png" alt="" />
+          </h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <div class="navbar-nav mr-auto py-0">
+            <a routerLink="/inicio" class="nav-item nav-link active">Home</a>
+
+
+
+            <a routerLink="/university" class="nav-item nav-link">University</a>
+            <a routerLink="/contact" class="nav-item nav-link">Contact</a>
+            <a routerLink="/homeSeller" class="nav-item nav-link">Seller</a>
+          </div>
+          <div class="navbar-nav ml-auto py-0">
+            <a href="" routerLink="/loginSeller" class="nav-item nav-link">Login seller</a>
+            <a routerLink="/registerSeller" class="nav-item nav-link">Register seller</a>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
 
 
 
 <div class="h-registration-background">
   <div class="h-registration-container">
-      <div class="h-horizontal-layout">
-          <div class="h-registration-header">
-              <h2 class="h-main-title">COMPANY REGISTRATION</h2>
-          </div>
-          <div class="h-image-container">
-              <img class="img-fluid h-logo" src="assets/img/company1.png" alt="HIVEX">
-          </div>
-          <div class="h-content-container">
-              <p class="h-image-caption">Enter the company details</p>
-              <div class="h-underline"></div>
-              <div class="h-registration-form-wrapper">
-                  <div class="h-form-overlay">COMPANY DETAILS</div>
-                  <form (ngSubmit)="onSubmit()" class="h-registration-form">
-                      <div class="h-form-group2">
-                          <label for="companyName">COMPANY NAME:</label>
-                          <input type="text" id="companyName" name="companyName" [(ngModel)]="companyName" placeholder="Enter the company name" required />
-                      </div>
-
-                      <div class="h-form-group">
-                          <label for="country">COUNTRY:</label>
-                          <input type="text" id="country" name="country" [(ngModel)]="country" placeholder="Enter your country" required />
-                      </div>
-
-                      <div class="h-form-group">
-                          <label for="productType">PRODUCT TYPE:</label>
-                          <input type="text" id="productType" name="productType" [(ngModel)]="productType" placeholder="Enter the product type" required />
-                      </div>
-
-                      <div class="h-form-group">
-                          <label for="countryCode">PHONE:</label>
-                          <div class="phone-container">
-                              <input type="tel" id="countryCode" name="countryCode" [(ngModel)]="countryCode" placeholder="+" maxlength="4" required />
-                              <input type="tel" id="phone" name="phone" [(ngModel)]="phone" (input)="onPhoneChange($event)" maxlength="11" placeholder="Enter the phone number" required />
-                          </div>
-                      </div>
-
-                      <div class="h-form-group">
-                          <label for="contactName">CONTACT PERSON'S NAME:</label>
-                          <input type="text" id="contactName" name="contactName" [(ngModel)]="contactName" placeholder="Enter the contact person's name" required />
-                      </div>
-
-                      <div class="h-form-group">
-                          <label for="contactRFC">CONTACT PERSON'S RFC:</label>
-                          <input type="text" id="contactRFC" name="contactRFC" [(ngModel)]="contactRFC" placeholder="Enter the contact person's RFC" required />
-                      </div>
-                      <br>
-
-
-
-                      <button type="submit" routerLink="/dashboardSeller" class="h-submit-button">Register Company</button>
-
-                  </form>
-              </div>
-          </div>
+    <div class="h-horizontal-layout">
+      <div class="h-registration-header">
+        <h2 class="h-main-title">COMPANY REGISTRATION</h2>
       </div>
+      <div class="h-image-container">
+        <img class="img-fluid h-logo" src="assets/img/company1.png" alt="HIVEX">
+      </div>
+      <div class="h-content-container">
+        <p class="h-image-caption">Enter the company details</p>
+        <div class="h-underline"></div>
+        <div class="h-registration-form-wrapper">
+          <div class="h-form-overlay">COMPANY DETAILS</div>
+          <form [formGroup]="CompanyForm" (ngSubmit)="addCompany()" class="h-registration-form">
+            <div class="h-form-group2">
+              <label for="companyName">COMPANY NAME:</label>
+              <input formControlName="companyName" type="text" id="companyName" name="companyName" placeholder="Enter the company name" required />
+            </div>
+            <div class="h-form-group2">
+              <label for="companyName">EMAIL:</label>
+              <input formControlName="companyEmail" type="text" id="companyEmail" name="companyName" placeholder="Enter the email" required />
+            </div>
+
+            <div class="h-form-group2">
+              <label for="companyName">PASSWORD:</label>
+              <input formControlName="companyPassword" type="password" id="companyPassword" name="companyName" placeholder="Enter password" required />
+            </div>
+            <div class="h-form-group2">
+              <label for="companyName">CONFIRMATION:</label>
+              <input formControlName="companyConfirmation" type="password" id="companyConfirmation" name="companyName" placeholder="Enter password" required />
+            </div>
+
+            <div class="h-form-group">
+              <label for="country">COUNTRY:</label>
+              <input formControlName="companyCountry" type="text" id="country" name="country" placeholder="Enter your country" required />
+            </div>
+
+            <div class="h-form-group">
+              <label for="productType">PRODUCT TYPE:</label>
+              <input type="text" formControlName="productType" id="productType" name="productType" placeholder="Enter the product type" required />
+            </div>
+
+            <div class="h-form-group">
+              <label for="countryCode">PHONE:</label>
+              <div class="phone-container">
+                <input type="tel" id="countryCode" name="countryCode" placeholder="+" maxlength="4" required />
+                <input type="tel" formControlName="companyPhone" id="phone" name="phone" maxlength="11" placeholder="Enter the phone number"
+                  required />
+              </div>
+            </div>
+
+            <div class="h-form-group">
+              <label for="contactName">CONTACT PERSON'S NAME:</label>
+              <input type="text" formControlName="companyContact" id="contactName" name="contactName" placeholder="Enter the contact person's name"
+                required />
+            </div>
+
+            <div class="h-form-group">
+              <label for="contactRFC">CONTACT PERSON'S RFC:</label>
+              <input type="text" formControlName="companyRfc" id="contactRFC" name="contactRFC" placeholder="Enter the contact person's RFC"
+                required />
+            </div>
+            <br>
+
+
+
+            <button type="submit" class="h-submit-button">Register Company</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <app-footer></app-footer>
-

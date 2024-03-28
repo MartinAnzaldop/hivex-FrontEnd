@@ -3,8 +3,9 @@ import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { user } from 'src/app/models/user';
-import firebase from 'firebase/compat/app'; // Importa firebase
-import { AngularFireAuth } from '@angular/fire/compat/auth'; // Importa AngularFireAuth
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import firebase from 'firebase/compat/app';
+import { ToastrService } from 'ngx-toastr'; // Importa ToastrService
 
 @Component({
   selector: 'user-register',
@@ -13,33 +14,48 @@ import { AngularFireAuth } from '@angular/fire/compat/auth'; // Importa AngularF
 })
 export class RegisterComponent implements OnInit {
   UserForm: FormGroup;
+  loading = false;
 
   constructor(private userService: UserService,
               private fb: FormBuilder,
               private router: Router,
-              private afAuth: AngularFireAuth) { // Inyecta AngularFireAuth
+              private afAuth: AngularFireAuth,
+              private toastr: ToastrService) { // Inyecta ToastrService
     this.UserForm = this.fb.group({
       name: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      confirmation: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
   ngOnInit() {}
 
   addUser() {
+    this.loading = true;
     const User: user = {
       name: this.UserForm?.get('name')?.value,
       email: this.UserForm?.get('email')?.value,
       password: this.UserForm?.get('password')?.value,
+      confirmation: this.UserForm?.get('confirmation')?.value
     };
+
+    if (this.UserForm.get('password')?.value !== this.UserForm.get('confirmation')?.value) {
+      this.toastr.error('Las contraseñas ingresadas deben ser las mismas', 'Error'); // Utiliza ToastrService para mostrar un mensaje de error
+      this.loading = false;
+      return;
+    }
 
     this.userService.addUser(User).subscribe(
       dato => {
-        this.router.navigate(['/home']);
+        this.loading = false;
+        this.router.navigate(['/login']);
+        this.toastr.info('check your email', 'check your email'); // Utiliza ToastrService para mostrar un mensaje de información
         console.log(User);
       },
       error => {
+        this.loading = false;
+        this.toastr.error('Error', 'Error'); // Utiliza ToastrService para mostrar un mensaje de error
         console.log(error);
       }
     );

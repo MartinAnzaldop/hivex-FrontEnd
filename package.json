@@ -15,7 +15,7 @@
     "@angular/compiler": "^14.2.0",
     "@angular/core": "^14.2.0",
     "@angular/fire": "^17.0.1",
-    "@angular/forms": "^14.2.0",
+    "@angular/forms": "^14.3.0",
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
@@ -23,7 +23,9 @@
     "@capacitor/angular": "^2.0.3",
     "@capacitor/core": "latest",
     "angular-oauth2-oidc": "^17.0.1",
+    "angular-webstorage-service": "^1.0.2",
     "firebase": "^10.9.0",
+    "ngx-toastr": "^14.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

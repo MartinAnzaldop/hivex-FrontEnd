@@ -12,21 +12,19 @@
         <a routerLink="/home" class="nav-item nav-link">Home</a>
         <a href="shop.html" routerLink="/categories" class="nav-item nav-link">Shop</a>
 
-        <div class="nav-item dropdown">
+        <div class="nav-item dropdown"> 
           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
           <div class="dropdown-menu rounded-0 m-0">
             <a href="cart.html" routerLink="/car" class="dropdown-item">Shopping Cart</a>
             <a href="checkout.html" routerLink="/checkout" class="dropdown-item">Checkout</a>
           </div>
         </div>
-        <a href="contact.html" routerLink="/contact" class="nav-item nav-link">Contact</a>
+
+        <a routerLink="/homeSeller" class="nav-item nav-link">Seller</a>
       </div>
-      <div class="navbar-nav ml-auto py-0">
-        <a href="" routerLink="/homeSeller" class=" boton1 nav-item nav-link"><button
-          class="bton btn-info">Seller</button></a>
-        <a href="" routerLink="/inicio" class="boton2 nav-item nav-link"><button
-          class="bton btn-danger">Log Out</button></a>
-      </div>
+
+        <button (click)="logOut()" class="btn btn-danger">Log Out</button>
+
     </div>
   </nav>
 

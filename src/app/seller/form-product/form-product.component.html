@@ -58,9 +58,15 @@
   </div>
 
 
-
+  <div class="d-flex justify-content-center align-items-center">
+    <button class="btn btn-success" [disabled]="loading" *ngIf="loading">
+      <span class="spinner-border spinner-border-sm mb-2"></span>
+      Loading..
+    </button>
+  </div> <br> 
   <!-- Submit button -->
-  <button data-mdb-ripple-init type="submit" class="btn in black btn-block mb-4">Create</button>
+  <button *ngIf="!loading" data-mdb-ripple-init type="submit" class="btn in black btn-block mb-4">Create</button>
+
 </form>
       </div>
   </div>

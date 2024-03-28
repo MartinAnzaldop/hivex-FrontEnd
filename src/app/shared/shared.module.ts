@@ -8,6 +8,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderSellerComponent } from './header-seller/header-seller.component';
+import { UserModule } from '../user/user.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderInicioComponent } from './header-inicio/header-inicio.component';
+import { NavbarInitComponent } from './navbar-init/navbar-init.component';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +22,11 @@ import { HeaderSellerComponent } from './header-seller/header-seller.component';
 
     FooterComponent,
     NavbarComponent,
-    HeaderSellerComponent
+    HeaderSellerComponent,
+    HeaderInicioComponent,
+    NavbarInitComponent,
+
+
 
   ],
   exports: [
@@ -26,11 +36,12 @@ import { HeaderSellerComponent } from './header-seller/header-seller.component';
     BrowserModule,
     FooterComponent,
     NavbarComponent,
-    HeaderSellerComponent
-
+    HeaderSellerComponent,
+    HeaderInicioComponent,
+    NavbarInitComponent
 
   ],
 
-  imports:[BrowserModule, RouterModule]
+  imports:[BrowserModule, RouterModule, FormsModule, ReactiveFormsModule]
 })
 export class SharedModule { }

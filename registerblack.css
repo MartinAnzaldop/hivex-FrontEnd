@@ -1,155 +1,154 @@
 /* Estilos generales */
 body {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Contenedor principal */
-  .h-registration-container {
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
-  }
-  
-  /* Títulos */
-  .h-main-title {
-    font-size: 2em;
-    color: #F9DD1E;
-    text-align: center;
-    padding-bottom: 20px;
-  }
-  
-  /* Diseño horizontal */
-  .h-horizontal-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  /* Imagen */
-  .h-image-container {
-    flex: 0.4; /* Ajusta el tamaño de la imagen según tus necesidades */
-    text-align: center;
-  }
-  
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px; /* Reducido el espacio superior */
-  }
-  
-  /* Formulario de registro */
-  .h-registration-form {
-    flex: 1;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  /* Grupo de formulario */
-  .h-form-group {
-    margin-bottom: 20px;
-  }
-  
-  /* Etiquetas del formulario */
-  .h-form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: rgb(255, 255, 255);
-  }
-  
-  /* Entradas del formulario */
-  .h-form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #F9DD1E;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-    background-color: #000000;
-    color:white;
-  }
-  
-  /* Código de país y teléfono en un solo label */
-  .h-form-group .phone-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .h-form-group select {
-    max-height: 150px;
-    overflow-y: auto;
-    margin-right: 5px;
-    border: 2px solid #F9DD1E;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  /* Botón de envío */
-  .h-submit-button {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .h-submit-button:hover {
-    background-color: rgb(255, 251, 0);
-  }
-  
-  /* Media Query para pantallas verticales */
-  @media screen and (orientation: portrait) {
-    /* Restablece el estilo horizontal y apila los elementos verticalmente */
-    .h-horizontal-layout {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .h-registration-form {
-      margin-top: 20px;
-    }
-  }
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Contenedor principal */
+.h-registration-container {
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+}
 
-/* Añade al final de tu archivo CSS */
+/* Títulos */
+.h-main-title {
+  font-size: 2em;
+  color: #F9DD1E;
+  text-align: center;
+  padding-bottom: 20px;
+}
 
+/* Diseño horizontal */
+.h-horizontal-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Imagen */
+.h-image-container {
+  flex: 0.4; /* Ajusta el tamaño de la imagen según tus necesidades */
+  text-align: center;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px; /* Reducido el espacio superior */
+}
+
+/* Formulario de registro */
+.h-registration-form {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grupo de formulario */
+.h-form-group {
+  margin-bottom: 20px;
+}
+
+/* Etiquetas del formulario */
 .h-form-group label {
   display: block;
   margin-bottom: 5px;
   color: rgb(255, 255, 255);
 }
 
+/* Entradas del formulario */
+.h-form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #F9DD1E;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #000000;
+  color:white;
+}
+
+/* Código de país y teléfono en un solo label */
 .h-form-group .phone-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.h-form-group select {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-right: 5px;
+  border: 2px solid #F9DD1E;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Botón de envío */
+.h-submit-button {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.h-submit-button:hover {
+  background-color: rgb(255, 251, 0);
+}
+
+/* Media Query para pantallas verticales */
+@media screen and (orientation: portrait) {
+  /* Restablece el estilo horizontal y apila los elementos verticalmente */
+  .h-horizontal-layout {
+    flex-direction: column;
+    align-items: stretch;
   }
 
+  .h-registration-form {
+    margin-top: 20px;
+  }
+}
+
+
+/* Añade al final de tu archivo CSS */
+
+.h-form-group label {
+display: block;
+margin-bottom: 5px;
+color: rgb(255, 255, 255);
+}
+
+.h-form-group .phone-container {
+  display: flex;
+  align-items: center;
+}
+
 .h-form-group .code-container {
-  margin-right: 5px;
+margin-right: 5px;
 }
 
 .h-form-group select,
 .h-form-group input {
-    margin-right: 10px; /* Ajusta el espacio entre el código de país y el teléfono según sea necesario */
-  }
+  margin-right: 10px; /* Ajusta el espacio entre el código de país y el teléfono según sea necesario */
+}
 
 .h-form-group select {
-  max-width: 100px;  /* Ajusta el ancho máximo del campo de código de país según sea necesario */
+max-width: 100px;  /* Ajusta el ancho máximo del campo de código de país según sea necesario */
 }
 
 #countryCode {
-    width: 80px; /* Ajusta según sea necesario */
-    margin-right: 10px; /* Ajusta el espacio entre el código de país y el teléfono según sea necesario */
-  }
-  #phone {
-    width: 100%; /* O ajusta según sea necesario */
-  }
-  #countryCode::placeholder {
-    color: #999; /* O cualquier otro color gris que desees */
-  }
-  
+  width: 80px; /* Ajusta según sea necesario */
+  margin-right: 10px; /* Ajusta el espacio entre el código de país y el teléfono según sea necesario */
+}
+#phone {
+  width: 100%; /* O ajusta según sea necesario */
+}
+#countryCode::placeholder {
+  color: #999; /* O cualquier otro color gris que desees */
+}
