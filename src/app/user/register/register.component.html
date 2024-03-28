@@ -51,6 +51,7 @@
                 <div class="card">
                   <div class="card-body py-5 px-md-5">
                     <form [formGroup]="UserForm" (ngSubmit)="addUser()" #registerForm="ngForm" novalidate>
+                      <H1>REGISTER</H1>
                       <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
@@ -112,6 +113,18 @@
 
 
                     </form>
+                    or Sign in with: <br>
+                    <button (click)="signInWithGoogle()" class="btn google-signin-button" style="background-color: transparent; border: none;">
+                      <i class="fab fa-google" style="color: #FFD700; font-size: 24px;" 
+                        onmouseover="this.style.color = 'black'" onmouseout="this.style.color = '#FFD700'"></i>
+                    </button>
+                    <div class="text-center">
+                      <a routerLink="/login">
+                        <p style="color:black">You already have an account?: Login</p>
+                      </a>
+        
+        
+                    </div>
                   </div>
                 </div>
               </div>
